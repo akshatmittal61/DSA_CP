@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    int n, s = 0;
+    long long int n, s = 0;
     cin >> n;
     if (n % 2 == 0)
         s = n / 2;
