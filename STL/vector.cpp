@@ -26,7 +26,7 @@ int main()
     cout << "\n Elements: ";
     for (int i : v)
         cout << i << ' ';
-    v.empty();
+    v.clear();
     cout << "\n Elements: ";
     for (int i : v)
         cout << i << ' ';
