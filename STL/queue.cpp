@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
     cout << "\n\n";
-    queue<string> q; // initialize stack
+    queue<string> q; // initialize queue
     q.push("Arcane");
     q.push("Akshat");
     q.push("Mittal");
