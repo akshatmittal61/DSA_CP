@@ -9,29 +9,16 @@
 #define sortrev(v) sort(v.end(), v.begin())
 using namespace std;
 
+int m = 0, c = 0;
+
 void solve()
 {
-    int n;
-    vector<int> v;
-    cin >> n;
-    fl(i, n)
-    {
-        int k;
-        cin >> k;
-        v.push_back(k);
-    }
-    int we = 0, wo = 0;
-    fl(i, n)
-    {
-        if (i % 2 == 0 && v[i] % 2 != 0)
-            ++we;
-        if (i % 2 != 0 && v[i] % 2 == 0)
-            ++wo;
-    }
-    if (we == wo)
-        cout << we;
-    else
-        cout << -1;
+    int a, b;
+    cin >> a >> b;
+    if (a > b)
+        ++m;
+    else if (a < b)
+        ++c;
 }
 
 int main()
@@ -40,9 +27,12 @@ int main()
         ll test;
     cin >> test;
     while (test--)
-    {
         solve();
-        cout << endl;
-    }
+    if (m > c)
+        cout << "Mishka";
+    else if (m < c)
+        cout << "Chris";
+    else
+        cout << "Friendship is magic!^^";
     return 0;
 }

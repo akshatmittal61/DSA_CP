@@ -12,26 +12,13 @@ using namespace std;
 void solve()
 {
     int n;
-    vector<int> v;
     cin >> n;
-    fl(i, n)
-    {
-        int k;
-        cin >> k;
-        v.push_back(k);
-    }
-    int we = 0, wo = 0;
-    fl(i, n)
-    {
-        if (i % 2 == 0 && v[i] % 2 != 0)
-            ++we;
-        if (i % 2 != 0 && v[i] % 2 == 0)
-            ++wo;
-    }
-    if (we == wo)
-        cout << we;
+    int m = 1;
+    if (n % 2 == 0)
+        m = n / 2;
     else
-        cout << -1;
+        m = (n - 1) / 2;
+    cout << m;
 }
 
 int main()

@@ -11,27 +11,16 @@ using namespace std;
 
 void solve()
 {
-    int n;
-    vector<int> v;
-    cin >> n;
-    fl(i, n)
+    int k, l, j = 1;
+    cin >> k;
+    for (int i = 1; i <= k; i++, j++)
     {
-        int k;
-        cin >> k;
-        v.push_back(k);
+        if (j % 3 != 0 && j % 10 != 3)
+            l = j;
+        else
+            --i;
     }
-    int we = 0, wo = 0;
-    fl(i, n)
-    {
-        if (i % 2 == 0 && v[i] % 2 != 0)
-            ++we;
-        if (i % 2 != 0 && v[i] % 2 == 0)
-            ++wo;
-    }
-    if (we == wo)
-        cout << we;
-    else
-        cout << -1;
+    cout << l;
 }
 
 int main()

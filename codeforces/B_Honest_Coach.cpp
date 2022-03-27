@@ -12,26 +12,19 @@ using namespace std;
 void solve()
 {
     int n;
-    vector<int> v;
     cin >> n;
+    vector<int> v, d;
     fl(i, n)
     {
-        int k;
-        cin >> k;
-        v.push_back(k);
+        int l;
+        cin >> l;
+        v.push_back(l);
     }
-    int we = 0, wo = 0;
-    fl(i, n)
-    {
-        if (i % 2 == 0 && v[i] % 2 != 0)
-            ++we;
-        if (i % 2 != 0 && v[i] % 2 == 0)
-            ++wo;
-    }
-    if (we == wo)
-        cout << we;
-    else
-        cout << -1;
+    sortall(v);
+    fl(i, n - 1)
+        d.push_back(abs(v[i] - v[i + 1]));
+    sortall(d);
+    cout << d[0];
 }
 
 int main()

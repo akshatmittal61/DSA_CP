@@ -12,37 +12,35 @@ using namespace std;
 void solve()
 {
     int n;
-    vector<int> v;
     cin >> n;
+    vector<int> v;
+    ll s = 0, d = 0;
     fl(i, n)
     {
-        int k;
-        cin >> k;
-        v.push_back(k);
+        int l;
+        cin >> l;
+        v.push_back(l);
     }
-    int we = 0, wo = 0;
-    fl(i, n)
+    int beg = 0, end = n - 1, l = 0, i = 0;
+    while (beg <= end)
     {
-        if (i % 2 == 0 && v[i] % 2 != 0)
-            ++we;
-        if (i % 2 != 0 && v[i] % 2 == 0)
-            ++wo;
+        l = max(v[beg], v[end]);
+        if (l == v[beg])
+            ++beg;
+        else
+            --end;
+        if (i % 2 == 0)
+            s += l;
+        else
+            d += l;
+        ++i;
     }
-    if (we == wo)
-        cout << we;
-    else
-        cout << -1;
+    cout << s << ' ' << d;
 }
 
 int main()
 {
     _ fs
-        ll test;
-    cin >> test;
-    while (test--)
-    {
-        solve();
-        cout << endl;
-    }
+    solve();
     return 0;
 }
