@@ -11,34 +11,20 @@ using namespace std;
 
 void solve()
 {
-    ll n, t = 0, o = 0, s = 0, x;
+    ll n;
     cin >> n;
-    for (int i = 0; i < n; i++)
-    {
-        cin >> x;
-        if (x == 2)
-            t++;
-        else
-            o++;
-        s += x;
-    }
-    if (s % 2 == 1)
-        cout << "NO";
+    if (n % 3 == 0)
+        cout << n / 3 << ' ' << n / 3;
+    else if (n % 3 == 1)
+        cout << (n + 2) / 3 << ' ' << (n - 1) / 3;
     else
-    {
-        if (t % 2 == 1 && o >= 2)
-            cout << "YES";
-        else if (t % 2 == 0)
-            cout << "YES";
-        else
-            cout << "NO";
-    }
+        cout << (n - 2) / 3 << ' ' << (n + 1) / 3;
 }
 
 int main()
 {
     _ fs
-        ll test;
+        ll test = 1;
     cin >> test;
     while (test--)
     {
