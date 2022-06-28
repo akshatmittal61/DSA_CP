@@ -11,22 +11,24 @@ using namespace std;
 
 void solve()
 {
-    string s;
-    cin >> s;
-    for (int i = 0; i < s.length(); ++i)
+    int n;
+    cin >> n;
+    int k = 0;
+    while (n > 0)
     {
-        if (s[i] == 'H' || s[i] == 'Q' || s[i] == '9')
-        {
-            cout << "YES";
-            return;
-        }
+        n -= ((k + 1) * (k + 2)) / 2;
+        ++k;
     }
-    cout << "NO";
+    if (n == 0)
+        cout << k;
+    else
+        cout << k - 1;
 }
 
 int main()
 {
     _ fs
+        ll test = 1;
     solve();
     return 0;
 }

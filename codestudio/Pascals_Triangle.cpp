@@ -9,34 +9,25 @@
 #define sortrev(v) sort(v.end(), v.begin())
 using namespace std;
 
-int Max(vector<int> v, int n)
-{
-    int max = v[0];
-    fl(i, n) if (v[i] > max)
-        max = v[i];
-    return max;
-}
-
 void solve()
 {
-    int n, x;
-    cin >> n >> x;
-    vector<int> v;
-    fl(i, n)
+    int n;
+    cin >> n;
+    vector<vector<long long int>> ans = {{1}};
+    for (int i = 1; i < n; ++i)
     {
-        int l;
-        cin >> l;
-        v.push_back(l);
+        vector<long long int> t = {1};
+        for (int j = 1; j < i; ++j)
+            t.pb(ans[i - 1][j] + ans[i - 1][j - 1]);
+        t.pb(1);
+        ans.pb(t);
     }
-    int multi = Max(v, n);
-    int single = 0;
-    fl(i, n)
+    for (auto i : ans)
     {
-        single += v[i] / x;
-        if (v[i] % x != 0)
-            ++single;
+        for (auto j : i)
+            cout << j << ' ';
+        cout << endl;
     }
-    cout << min(multi, single);
 }
 
 int main()
@@ -45,9 +36,6 @@ int main()
         ll test = 1;
     cin >> test;
     while (test--)
-    {
         solve();
-        cout << endl;
-    }
     return 0;
 }

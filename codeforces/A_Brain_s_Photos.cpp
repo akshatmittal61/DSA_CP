@@ -11,22 +11,25 @@ using namespace std;
 
 void solve()
 {
-    string s;
-    cin >> s;
-    for (int i = 0; i < s.length(); ++i)
+    int n, m;
+    cin >> n >> m;
+    char c;
+    fl(i, m * n)
     {
-        if (s[i] == 'H' || s[i] == 'Q' || s[i] == '9')
+        cin >> c;
+        if (c != 'B' && c != 'G' && c != 'W')
         {
-            cout << "YES";
+            cout << "#Color";
             return;
         }
     }
-    cout << "NO";
+    cout << "#Black&White";
 }
 
 int main()
 {
     _ fs
+        ll test = 1;
     solve();
     return 0;
 }
