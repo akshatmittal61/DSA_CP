@@ -12,11 +12,16 @@ using namespace std;
 class ListNode
 {
 public:
-    int data;
+    int val;
     ListNode *next;
+    ListNode()
+    {
+        val = 0;
+        next = NULL;
+    }
     ListNode(int n)
     {
-        data = n;
+        val = n;
         next = NULL;
     }
 };
@@ -30,9 +35,7 @@ void insertion_tail(ListNode *&head, int n)
 {
     ListNode *newListNode = new ListNode(n);
     if (head == NULL)
-    {
         head = newListNode;
-    }
     else
     {
         ListNode *temp;
@@ -52,7 +55,7 @@ void insertion_mid(ListNode *&head, int n, int l)
     else
     {
         ListNode *temp;
-        for (temp = head; temp->data != l; temp = temp->next)
+        for (temp = head; temp->val != l; temp = temp->next)
             ;
         newListNode->next = temp->next;
         temp->next = newListNode;
@@ -81,47 +84,41 @@ void delete_tail(ListNode *&head)
 void traverse(ListNode *&head)
 {
     ListNode *temp;
-    for (temp = head; temp != NULL; temp = temp->next)
-        cout << temp->data << ' ';
+    if (head == NULL)
+        return;
+    for (temp = head->next; temp != NULL; temp = temp->next)
+        cout << temp->val << ' ';
 }
 
-ListNode *middleNode(ListNode *head)
+ListNode *removeElements(ListNode *head, int val)
 {
-    ListNode *temp = head;
-    int n = 0, k = 0;
+    ListNode *temp = head->next;
     while (temp != NULL)
     {
-        ++n;
-        temp = temp->next;
-    }
-    temp = head;
-    while (temp != NULL)
-    {
-        ++k;
-        temp = temp->next;
-        if (n & 1)
+        if (val == temp->val)
         {
-            if (k == (n + 1) / 2)
-                return temp;
+            ListNode *delNode = temp;
+            temp = temp->next;
+            // delete delNode;
         }
-        else if (k == n / 2)
-            return temp;
+        else
+            temp = temp->next;
     }
-    return temp;
+    return head;
 }
 
 void solve()
 {
-    int n;
-    cin >> n;
+    int n, k;
     ListNode *head;
+    cin >> n >> k;
     fl(i, n)
     {
-        int k;
-        cin >> k;
-        insertion_tail(head, k);
+        int l;
+        cin >> l;
+        insertion_tail(head, l);
     }
-    ListNode *ans = middleNode(head);
+    ListNode *ans = removeElements(head, k);
     traverse(ans);
 }
 

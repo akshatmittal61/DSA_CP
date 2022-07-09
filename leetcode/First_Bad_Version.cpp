@@ -9,39 +9,44 @@
 #define sortrev(v) sort(v.begin(), v.end(), greater<ll>())
 using namespace std;
 
-int longestPalindrome(string s)
+vector<int> bads;
+bool isBadVersion(int i)
 {
-    map<char, int> m;
-    int ans = 0;
-    for (auto i : s)
-        m[i]++;
-    for (auto i : m)
+    return bads[i - 1];
+}
+
+int firstBadVersion(ll n)
+{
+    ll beg = 0, end = n - 1;
+    ll mid = (beg + end) / 2;
+    ll ans = mid + 1;
+    while (beg <= end)
     {
-        if (i.second & 1)
+        mid = (beg + end) / 2;
+        if (isBadVersion(mid + 1))
         {
-            ans += i.second - 1;
-            m[i.first] = 1;
+            ans = mid + 1;
+            end = mid - 1;
         }
         else
-        {
-            ans += i.second;
-            m[i.first] = 0;
-        }
-    }
-    for (auto i : m)
-        if (i.second == 1)
-        {
-            ans++;
+            beg = mid + 1;
+        if (beg > end)
             return ans;
-        }
+    }
     return ans;
 }
 
 void solve()
 {
-    string s;
-    cin >> s;
-    cout << longestPalindrome(s);
+    int n, k;
+    cin >> n;
+    fl(i, n)
+    {
+        int a;
+        cin >> a;
+        bads.pb(a);
+    }
+    cout << firstBadVersion(n);
 }
 
 int main()
