@@ -39,6 +39,7 @@ double findMedianSortedArrays(const vector<int> &A, const vector<int> &B)
         b = l1 >= m ? INT_MAX : A[l1];
         c = l2 <= 0 ? INT_MIN : B[l2 - 1];
         d = l2 >= n ? INT_MAX : B[l2];
+        cout << a << ' ' << b << ' ' << c << ' ' << d << endl;
         if (a <= d && c <= b)
         {
             if (total & 1)
