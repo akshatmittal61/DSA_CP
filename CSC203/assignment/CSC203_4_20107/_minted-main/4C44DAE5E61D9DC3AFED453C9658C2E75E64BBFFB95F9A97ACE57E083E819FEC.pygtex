@@ -1,0 +1,33 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{k+kt}{int} \PYG{n+nf}{return\PYGZus{}sec}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{h}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{m}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{s}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{sec}\PYG{p}{;}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{s} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{60}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{m} \PYG{o}{=} \PYG{n}{m} \PYG{o}{+} \PYG{p}{(}\PYG{n}{s} \PYG{o}{/} \PYG{l+m+mi}{60}\PYG{p}{);}
+        \PYG{n}{s} \PYG{o}{=} \PYG{n}{s} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{60}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{m} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{60}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{h} \PYG{o}{=} \PYG{n}{h} \PYG{o}{+} \PYG{p}{(}\PYG{n}{m} \PYG{o}{/} \PYG{l+m+mi}{60}\PYG{p}{);}
+        \PYG{n}{m} \PYG{o}{=} \PYG{n}{m} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{60}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{h} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{12}\PYG{p}{)}
+        \PYG{n}{h} \PYG{o}{=} \PYG{n}{h} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{12}\PYG{p}{;}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Your entered time is: \PYGZpc{}d : \PYGZpc{}d : \PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{h}\PYG{p}{,} \PYG{n}{m}\PYG{p}{,} \PYG{n}{s}\PYG{p}{);}
+    \PYG{n}{sec} \PYG{o}{=} \PYG{p}{(}\PYG{n}{h} \PYG{o}{*} \PYG{l+m+mi}{3600}\PYG{p}{)} \PYG{o}{+} \PYG{p}{(}\PYG{n}{m} \PYG{o}{*} \PYG{l+m+mi}{60}\PYG{p}{)} \PYG{o}{+} \PYG{n}{s}\PYG{p}{;}
+    \PYG{k}{return} \PYG{n}{sec}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k+kt}{int} \PYG{n}{h}\PYG{p}{,} \PYG{n}{m}\PYG{p}{,} \PYG{n}{s}\PYG{p}{,} \PYG{n}{sec}\PYG{p}{;}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Enter the time (12\PYGZhy{}hour clock): \PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZpc{}d\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{h}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{m}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{s}\PYG{p}{);}
+    \PYG{n}{sec} \PYG{o}{=} \PYG{n}{return\PYGZus{}sec}\PYG{p}{(}\PYG{n}{h}\PYG{p}{,} \PYG{n}{m}\PYG{p}{,} \PYG{n}{s}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Seconds elapsed since last 12: \PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{sec}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

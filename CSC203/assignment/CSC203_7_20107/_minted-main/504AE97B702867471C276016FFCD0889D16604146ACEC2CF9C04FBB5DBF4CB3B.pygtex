@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k+kt}{char} \PYG{n}{str}\PYG{p}{[]} \PYG{o}{=} \PYG{l+s}{\PYGZdq{}Wait For Me To Come Home\PYGZdq{}}\PYG{p}{;}
+    \PYG{k+kt}{char} \PYG{o}{*}\PYG{n}{s} \PYG{o}{=} \PYG{n}{str}\PYG{p}{;}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ The original string: \PYGZpc{}s\PYGZdq{}}\PYG{p}{,} \PYG{n}{str}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ The new string: \PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{for} \PYG{p}{(;} \PYG{o}{*}\PYG{n}{s} \PYG{o}{!=} \PYG{l+s+sc}{\PYGZsq{}\PYGZbs{}0\PYGZsq{}}\PYG{p}{;} \PYG{o}{*}\PYG{n}{s}\PYG{o}{++}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{k}{if} \PYG{p}{(}\PYG{o}{*}\PYG{n}{s} \PYG{o}{\PYGZgt{}=} \PYG{l+s+sc}{\PYGZsq{}a\PYGZsq{}} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{o}{*}\PYG{n}{s} \PYG{o}{\PYGZlt{}=} \PYG{l+s+sc}{\PYGZsq{}z\PYGZsq{}}\PYG{p}{)}
+            \PYG{o}{*}\PYG{n}{s} \PYG{o}{=} \PYG{o}{*}\PYG{n}{s} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{32}\PYG{p}{;}   
+            \PYG{c+c1}{//if anycharcter is lowercase, change into uppercase}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}c\PYGZdq{}}\PYG{p}{,} \PYG{o}{*}\PYG{n}{s}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

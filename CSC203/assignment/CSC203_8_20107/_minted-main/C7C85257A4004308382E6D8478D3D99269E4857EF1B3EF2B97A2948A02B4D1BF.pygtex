@@ -1,0 +1,37 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k+kt}{FILE} \PYG{o}{*}\PYG{n}{fi1}\PYG{p}{,}\PYG{o}{*}\PYG{n}{fi2}\PYG{p}{,} \PYG{o}{*}\PYG{n}{fo}\PYG{p}{;}
+    \PYG{k+kt}{char} \PYG{n}{ch}\PYG{p}{;}
+    \PYG{n}{fi1} \PYG{o}{=} \PYG{n}{fopen}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}TRIAL.TXT\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}r\PYGZdq{}}\PYG{p}{);}  \PYG{c+c1}{//opening input.txt in read mode}
+    \PYG{n}{fi2} \PYG{o}{=} \PYG{n}{fopen}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}INPUT.TXT\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}r\PYGZdq{}}\PYG{p}{);}  \PYG{c+c1}{//opening trial.txt in read mode}
+    \PYG{n}{fo} \PYG{o}{=} \PYG{n}{fopen}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}q6.txt\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}a\PYGZdq{}}\PYG{p}{);}  \PYG{c+c1}{//opening q6.txt in write mode}
+    \PYG{k}{if} \PYG{p}{((}\PYG{n}{fi1} \PYG{o}{==} \PYG{n+nb}{NULL}\PYG{p}{)}\PYG{o}{||}\PYG{p}{(}\PYG{n}{fi2} \PYG{o}{==} \PYG{n+nb}{NULL}\PYG{p}{))}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Unable to locate file\PYGZdq{}}\PYG{p}{);}
+        \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{else}
+    \PYG{p}{\PYGZob{}}
+        \PYG{k}{do}
+        \PYG{p}{\PYGZob{}}
+            \PYG{n}{ch} \PYG{o}{=} \PYG{n}{getc}\PYG{p}{(}\PYG{n}{fi1}\PYG{p}{);} \PYG{c+c1}{//getting character print in fo}
+            \PYG{n}{fprintf}\PYG{p}{(}\PYG{n}{fo}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}\PYGZpc{}c\PYGZdq{}}\PYG{p}{,} \PYG{n}{ch}\PYG{p}{);}
+        \PYG{p}{\PYGZcb{}} \PYG{k}{while} \PYG{p}{(}\PYG{n}{ch} \PYG{o}{!=} \PYG{n}{EOF}\PYG{p}{);}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ input.txt written in new file\PYGZdq{}}\PYG{p}{);}
+        \PYG{k}{do}
+        \PYG{p}{\PYGZob{}}
+            \PYG{n}{ch} \PYG{o}{=} \PYG{n}{getc}\PYG{p}{(}\PYG{n}{fi2}\PYG{p}{);} \PYG{c+c1}{//getting character print in fo}
+            \PYG{n}{fprintf}\PYG{p}{(}\PYG{n}{fo}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}\PYGZpc{}c\PYGZdq{}}\PYG{p}{,} \PYG{n}{ch}\PYG{p}{);}
+        \PYG{p}{\PYGZcb{}} \PYG{k}{while} \PYG{p}{(}\PYG{n}{ch} \PYG{o}{!=} \PYG{n}{EOF}\PYG{p}{);}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ trial.txt written in new file\PYGZdq{}}\PYG{p}{);}
+        \PYG{n}{fclose}\PYG{p}{(}\PYG{n}{fi1}\PYG{p}{);}
+        \PYG{n}{fclose}\PYG{p}{(}\PYG{n}{fi2}\PYG{p}{);}
+        \PYG{n}{fclose}\PYG{p}{(}\PYG{n}{fo}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

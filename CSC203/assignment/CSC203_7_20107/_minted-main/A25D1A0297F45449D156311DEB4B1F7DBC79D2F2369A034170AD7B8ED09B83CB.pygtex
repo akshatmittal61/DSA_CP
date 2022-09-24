@@ -1,0 +1,43 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{k}{union} \PYG{n}{length\PYGZus{}fi}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{feet}\PYG{p}{;}
+    \PYG{k+kt}{int} \PYG{n}{inch}\PYG{p}{;}
+\PYG{p}{\PYGZcb{};}
+\PYG{k}{union} \PYG{n}{length\PYGZus{}mcm}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{m}\PYG{p}{;}
+    \PYG{k+kt}{int} \PYG{n}{cm}\PYG{p}{;}
+\PYG{p}{\PYGZcb{};}
+\PYG{k}{union} \PYG{n}{length\PYGZus{}mcm} \PYG{n+nf}{change}\PYG{p}{(}\PYG{k}{union} \PYG{n}{length\PYGZus{}fi} \PYG{o}{*}\PYG{n}{len\PYGZus{}obj}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k}{union} \PYG{n}{length\PYGZus{}mcm} \PYG{n}{test\PYGZus{}obj}\PYG{p}{;}
+    \PYG{k+kt}{int} \PYG{n}{centi}\PYG{p}{,} \PYG{n}{meter}\PYG{p}{;} \PYG{c+c1}{// centimeters = ( total inches ) * 2.54}
+    \PYG{n}{centi} \PYG{o}{=} \PYG{p}{((}\PYG{n}{len\PYGZus{}obj}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{feet} \PYG{o}{*} \PYG{l+m+mi}{12}\PYG{p}{)} \PYG{o}{+} \PYG{n}{len\PYGZus{}obj}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{inch}\PYG{p}{)} \PYG{o}{*} \PYG{l+m+mf}{2.54}\PYG{p}{;}
+    \PYG{n}{meter} \PYG{o}{=} \PYG{p}{(}\PYG{n}{centi} \PYG{o}{/} \PYG{l+m+mi}{100}\PYG{p}{);}
+    \PYG{n}{centi} \PYG{o}{=} \PYG{n}{centi} \PYG{o}{\PYGZhy{}} \PYG{p}{(}\PYG{n}{meter} \PYG{o}{*} \PYG{l+m+mi}{100}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Before commiting to union:\PYGZhy{} }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{  m: \PYGZpc{}d }\PYG{l+s+se}{\PYGZbs{}t}\PYG{l+s}{ cm: \PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{meter}\PYG{p}{,} \PYG{n}{centi}\PYG{p}{);}
+    \PYG{n}{test\PYGZus{}obj}\PYG{p}{.}\PYG{n}{m} \PYG{o}{=} \PYG{n}{meter}\PYG{p}{,} \PYG{n}{test\PYGZus{}obj}\PYG{p}{.}\PYG{n}{cm} \PYG{o}{=} \PYG{n}{centi}\PYG{p}{;}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ After commiting to union:\PYGZhy{} }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{  m: \PYGZpc{}d }\PYG{l+s+se}{\PYGZbs{}t}\PYG{l+s}{ cm: \PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{test\PYGZus{}obj}\PYG{p}{.}\PYG{n}{m}\PYG{p}{,} \PYG{n}{test\PYGZus{}obj}\PYG{p}{.}\PYG{n}{cm}\PYG{p}{);}
+    \PYG{k}{return} \PYG{n}{test\PYGZus{}obj}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{union} \PYG{n}{length\PYGZus{}fi} \PYG{n}{old\PYGZus{}len}\PYG{p}{;}
+    \PYG{k}{union} \PYG{n}{length\PYGZus{}mcm} \PYG{n}{new\PYGZus{}len}\PYG{p}{;}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{Enter the length in feet inch:\PYGZhy{} }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} Feet: \PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{old\PYGZus{}len}\PYG{p}{.}\PYG{n}{feet}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} Inches: \PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{old\PYGZus{}len}\PYG{p}{.}\PYG{n}{inch}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Feet: \PYGZpc{}d }\PYG{l+s+se}{\PYGZbs{}t}\PYG{l+s}{ Inch: \PYGZpc{}d}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{old\PYGZus{}len}\PYG{p}{.}\PYG{n}{feet}\PYG{p}{,} \PYG{n}{old\PYGZus{}len}\PYG{p}{.}\PYG{n}{inch}\PYG{p}{);}
+    \PYG{n}{new\PYGZus{}len} \PYG{o}{=} \PYG{n}{change}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{old\PYGZus{}len}\PYG{p}{);} \PYG{c+c1}{// conversion from feet\PYGZhy{}inch to m\PYGZhy{}cm}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{ New Length:\PYGZhy{} \PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{  Meters: \PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{new\PYGZus{}len}\PYG{p}{.}\PYG{n}{m}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{  Centimeters: \PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{new\PYGZus{}len}\PYG{p}{.}\PYG{n}{cm}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

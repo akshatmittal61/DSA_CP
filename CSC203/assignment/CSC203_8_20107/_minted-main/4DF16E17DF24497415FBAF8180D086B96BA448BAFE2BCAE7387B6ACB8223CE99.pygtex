@@ -1,0 +1,57 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}string.h\PYGZgt{}}
+\PYG{k}{struct} \PYG{n}{student}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{roll}\PYG{p}{;}
+    \PYG{k+kt}{char} \PYG{n}{name}\PYG{p}{[}\PYG{l+m+mi}{20}\PYG{p}{];}
+    \PYG{k+kt}{int} \PYG{n}{Class}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}} \PYG{n}{Student}\PYG{p}{;}
+\PYG{k}{struct} \PYG{n}{student} \PYG{n}{stud}\PYG{p}{[}\PYG{l+m+mi}{5}\PYG{p}{]} \PYG{o}{=} \PYG{p}{\PYGZob{}\PYGZob{}}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Jonas\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{\PYGZcb{},}
+                          \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Martha\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{\PYGZcb{},}
+                          \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Klaus\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{12}\PYG{p}{\PYGZcb{},}
+                          \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Stefen\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{11}\PYG{p}{\PYGZcb{},}
+                          \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Caroline\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{11}\PYG{p}{\PYGZcb{}\PYGZcb{};}
+\PYG{c+c1}{//declaring values for 5 students}
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{k+kt}{FILE} \PYG{o}{*}\PYG{n}{fio}\PYG{p}{;}
+    \PYG{n}{fio} \PYG{o}{=} \PYG{n}{fopen}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}q12.dat\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}w+b\PYGZdq{}}\PYG{p}{);} \PYG{c+c1}{//open q12.dat in write mode}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{fio} \PYG{o}{==} \PYG{n+nb}{NULL}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Cannot open file\PYGZdq{}}\PYG{p}{);}
+        \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{else}
+    \PYG{p}{\PYGZob{}}
+        \PYG{k}{while} \PYG{p}{(}\PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{5}\PYG{p}{)}
+        \PYG{p}{\PYGZob{}}
+            \PYG{n}{fwrite}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{stud}\PYG{p}{[}\PYG{n}{i}\PYG{p}{],} \PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{stud}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]),} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{fio}\PYG{p}{);} \PYG{c+c1}{//writing records to file}
+            \PYG{n}{fflush}\PYG{p}{(}\PYG{n}{stdin}\PYG{p}{);}
+            \PYG{o}{++}\PYG{n}{i}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{n}{fclose}\PYG{p}{(}\PYG{n}{fio}\PYG{p}{);}
+    \PYG{n}{fio} \PYG{o}{=} \PYG{n}{fopen}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}q12.dat\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}rb\PYGZdq{}}\PYG{p}{);} \PYG{c+c1}{//open q12.dat in read mode}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{fio} \PYG{o}{==} \PYG{n+nb}{NULL}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Cannot open file\PYGZdq{}}\PYG{p}{);}
+        \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{else}
+    \PYG{p}{\PYGZob{}}
+        \PYG{k}{while} \PYG{p}{(}\PYG{n}{fread}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{Student}\PYG{p}{,} \PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{Student}\PYG{p}{),} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{fio}\PYG{p}{)} \PYG{o}{==} \PYG{l+m+mi}{1}\PYG{p}{)}
+        \PYG{p}{\PYGZob{}}
+            \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Roll No.: \PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{Student}\PYG{p}{.}\PYG{n}{roll}\PYG{p}{);}
+            \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Name: \PYGZpc{}s\PYGZdq{}}\PYG{p}{,} \PYG{n}{Student}\PYG{p}{.}\PYG{n}{name}\PYG{p}{);}
+            \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Class: \PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{Student}\PYG{p}{.}\PYG{n}{Class}\PYG{p}{);}
+            \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{n}{fclose}\PYG{p}{(}\PYG{n}{fio}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

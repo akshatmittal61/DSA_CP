@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k+kt}{int} \PYG{n}{a}\PYG{p}{[}\PYG{l+m+mi}{10}\PYG{p}{]} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{23}\PYG{p}{,} \PYG{l+m+mi}{12}\PYG{p}{,} \PYG{l+m+mi}{15}\PYG{p}{,} \PYG{l+m+mi}{18}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{,} \PYG{l+m+mi}{45}\PYG{p}{,} \PYG{l+m+mi}{55}\PYG{p}{,} \PYG{l+m+mi}{25}\PYG{p}{\PYGZcb{},} \PYG{n}{i}\PYG{p}{,} \PYG{n}{j} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{b}\PYG{p}{[}\PYG{l+m+mi}{10}\PYG{p}{];}
+    \PYG{k}{for} \PYG{p}{(}\PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{10}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{a}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{9} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{)}
+            \PYG{n}{b}\PYG{p}{[}\PYG{n}{j}\PYG{o}{++}\PYG{p}{]} \PYG{o}{=} \PYG{n}{a}\PYG{p}{[}\PYG{n}{i}\PYG{p}{];} \PYG{c+c1}{//if a[i] is divisible by 9 add it to arrab b}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{for} \PYG{p}{(}\PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{j}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d \PYGZdq{}}\PYG{p}{,} \PYG{n}{b}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]);} \PYG{c+c1}{//print the array b}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

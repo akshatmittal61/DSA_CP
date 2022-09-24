@@ -1,0 +1,188 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}string.h\PYGZgt{}}
+\PYG{k}{struct} \PYG{n}{employee}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{number}\PYG{p}{;}
+    \PYG{k+kt}{char} \PYG{n}{name}\PYG{p}{[}\PYG{l+m+mi}{20}\PYG{p}{];}
+    \PYG{k+kt}{char} \PYG{n}{sex}\PYG{p}{;}
+    \PYG{k+kt}{float} \PYG{n}{gross\PYGZus{}salary}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}} \PYG{n}{Employee}\PYG{p}{;}
+\PYG{k+kt}{void} \PYG{n+nf}{print\PYGZus{}employee}\PYG{p}{(}\PYG{k}{struct} \PYG{n}{employee} \PYG{o}{*}\PYG{n}{employes}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Employee Code: \PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{employes}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{number}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Employee Name: \PYGZpc{}s (\PYGZpc{}c)\PYGZdq{}}\PYG{p}{,} \PYG{n}{employes}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{name}\PYG{p}{,} \PYG{n}{employes}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{sex}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Employee gross salary: \PYGZpc{}f\PYGZdq{}}\PYG{p}{,} \PYG{n}{employes}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{gross\PYGZus{}salary}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\PYG{c+c1}{//declaring values for 5 employes}
+\PYG{k}{struct} \PYG{n}{employee} \PYG{n}{employes}\PYG{p}{[}\PYG{l+m+mi}{5}\PYG{p}{]} \PYG{o}{=} \PYG{p}{\PYGZob{}\PYGZob{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Jonas\PYGZdq{}}\PYG{p}{,} \PYG{l+s+sc}{\PYGZsq{}M\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{7500}\PYG{p}{\PYGZcb{},}
+                               \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Martha\PYGZdq{}}\PYG{p}{,} \PYG{l+s+sc}{\PYGZsq{}F\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{6000}\PYG{p}{\PYGZcb{},}
+                               \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Klaus\PYGZdq{}}\PYG{p}{,} \PYG{l+s+sc}{\PYGZsq{}M\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{50000}\PYG{p}{\PYGZcb{},}
+                               \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Stefen\PYGZdq{}}\PYG{p}{,} \PYG{l+s+sc}{\PYGZsq{}M\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{10000}\PYG{p}{\PYGZcb{},}
+                               \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Caroline\PYGZdq{}}\PYG{p}{,} \PYG{l+s+sc}{\PYGZsq{}F\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{15000}\PYG{p}{\PYGZcb{}\PYGZcb{};}
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{n} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{choice}\PYG{p}{,} \PYG{n}{number}\PYG{p}{;}
+    \PYG{k+kt}{char} \PYG{n}{ch} \PYG{o}{=} \PYG{l+s+sc}{\PYGZsq{}y\PYGZsq{}}\PYG{p}{,} \PYG{n}{found} \PYG{o}{=} \PYG{l+s+sc}{\PYGZsq{}n\PYGZsq{}}\PYG{p}{,} \PYG{n}{c}\PYG{p}{,} \PYG{n}{temp}\PYG{p}{;}
+    \PYG{k+kt}{float} \PYG{n}{salary}\PYG{p}{;}
+    \PYG{k}{struct} \PYG{n}{employee} \PYG{n}{employe}\PYG{p}{[}\PYG{l+m+mi}{100}\PYG{p}{];}
+    \PYG{k+kt}{FILE} \PYG{o}{*}\PYG{n}{fio}\PYG{p}{;}
+    \PYG{c+cm}{/* fio = fopen(\PYGZdq{}q7.dat\PYGZdq{}, \PYGZdq{}w+b\PYGZdq{});}
+\PYG{c+cm}{    if (fio == NULL)}
+\PYG{c+cm}{    \PYGZob{}}
+\PYG{c+cm}{        printf(\PYGZdq{}Cannot open file\PYGZdq{});}
+\PYG{c+cm}{        return 0;}
+\PYG{c+cm}{    \PYGZcb{}}
+\PYG{c+cm}{    else}
+\PYG{c+cm}{    \PYGZob{}}
+\PYG{c+cm}{        while (i \PYGZlt{} 5)}
+\PYG{c+cm}{        \PYGZob{}}
+\PYG{c+cm}{            fwrite(\PYGZam{}employes[i], sizeof(employes[i]), 1, fio);}
+\PYG{c+cm}{            fflush(stdin);}
+\PYG{c+cm}{            ++i;}
+\PYG{c+cm}{        \PYGZcb{}}
+\PYG{c+cm}{    \PYGZcb{}}
+\PYG{c+cm}{    fclose(fio); */}
+    \PYG{c+c1}{//code for writing default entries to q7.dat}
+    \PYG{n}{print\PYGZus{}all}\PYG{p}{();}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ 1. Enter details for new employee\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ 2. An employee is leaving\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ 3. An update in an employee\PYGZsq{}s salary\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ 4. Print details of all employees\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{do}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{ Enter your choice: \PYGZdq{}}\PYG{p}{);}
+        \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{choice}\PYG{p}{);}
+        \PYG{k}{switch} \PYG{p}{(}\PYG{n}{choice}\PYG{p}{)}
+        \PYG{p}{\PYGZob{}}
+        \PYG{k}{case} \PYG{l+m+mi}{1}\PYG{o}{:}
+            \PYG{n}{fio} \PYG{o}{=} \PYG{n}{fopen}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}q7.dat\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}a+b\PYGZdq{}}\PYG{p}{);} \PYG{c+c1}{//open q7.dat in append mode}
+            \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+            \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} Employee Code: \PYGZdq{}}\PYG{p}{);}
+            \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{Employee}\PYG{p}{.}\PYG{n}{number}\PYG{p}{);}
+            \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} Employee Name: \PYGZdq{}}\PYG{p}{);}
+            \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}s\PYGZdq{}}\PYG{p}{,} \PYG{n}{Employee}\PYG{p}{.}\PYG{n}{name}\PYG{p}{);}
+            \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}c\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{temp}\PYG{p}{);}
+            \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} Employee sex: \PYGZdq{}}\PYG{p}{);}
+            \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}c\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{Employee}\PYG{p}{.}\PYG{n}{sex}\PYG{p}{);}
+            \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} Employee gross salary: \PYGZdq{}}\PYG{p}{);}
+            \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}f\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{Employee}\PYG{p}{.}\PYG{n}{gross\PYGZus{}salary}\PYG{p}{);}
+            \PYG{c+c1}{//writing new entry in q7.dat}
+            \PYG{n}{fwrite}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{Employee}\PYG{p}{,} \PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{Employee}\PYG{p}{),} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{fio}\PYG{p}{);}
+            \PYG{n}{fflush}\PYG{p}{(}\PYG{n}{stdin}\PYG{p}{);}
+            \PYG{n}{fclose}\PYG{p}{(}\PYG{n}{fio}\PYG{p}{);}
+            \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Record Added\PYGZdq{}}\PYG{p}{);}
+            \PYG{k}{break}\PYG{p}{;}
+        \PYG{k}{case} \PYG{l+m+mi}{2}\PYG{o}{:}
+            \PYG{n}{n} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+            \PYG{n}{fio} \PYG{o}{=} \PYG{n}{fopen}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}q7.dat\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}rb\PYGZdq{}}\PYG{p}{);} \PYG{c+c1}{//open q7.dat in read mode}
+            \PYG{k}{if} \PYG{p}{(}\PYG{n}{fio} \PYG{o}{==} \PYG{n+nb}{NULL}\PYG{p}{)}
+            \PYG{p}{\PYGZob{}}
+                \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Cannot open file\PYGZdq{}}\PYG{p}{);}
+                \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+            \PYG{p}{\PYGZcb{}}
+            \PYG{k}{else}
+            \PYG{p}{\PYGZob{}}
+                \PYG{k}{while} \PYG{p}{(}\PYG{n}{fread}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{Employee}\PYG{p}{,} \PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{Employee}\PYG{p}{),} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{fio}\PYG{p}{)} \PYG{o}{==} \PYG{l+m+mi}{1}\PYG{p}{)}
+                \PYG{p}{\PYGZob{}}
+                    \PYG{n}{employe}\PYG{p}{[}\PYG{n}{n}\PYG{p}{].}\PYG{n}{number} \PYG{o}{=} \PYG{n}{Employee}\PYG{p}{.}\PYG{n}{number}\PYG{p}{;}
+                    \PYG{n}{strcpy}\PYG{p}{(}\PYG{n}{employe}\PYG{p}{[}\PYG{n}{n}\PYG{p}{].}\PYG{n}{name}\PYG{p}{,} \PYG{n}{Employee}\PYG{p}{.}\PYG{n}{name}\PYG{p}{);}
+                    \PYG{n}{employe}\PYG{p}{[}\PYG{n}{n}\PYG{p}{].}\PYG{n}{sex} \PYG{o}{=} \PYG{n}{Employee}\PYG{p}{.}\PYG{n}{sex}\PYG{p}{;}
+                    \PYG{n}{employe}\PYG{p}{[}\PYG{n}{n}\PYG{p}{].}\PYG{n}{gross\PYGZus{}salary} \PYG{o}{=} \PYG{n}{Employee}\PYG{p}{.}\PYG{n}{gross\PYGZus{}salary}\PYG{p}{;}
+                    \PYG{o}{++}\PYG{n}{n}\PYG{p}{;}
+                \PYG{p}{\PYGZcb{}}
+            \PYG{p}{\PYGZcb{}}
+            \PYG{n}{fclose}\PYG{p}{(}\PYG{n}{fio}\PYG{p}{);}
+            \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Enter the serial number of employee: \PYGZdq{}}\PYG{p}{);}
+            \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{number}\PYG{p}{);}
+            \PYG{n}{fio} \PYG{o}{=} \PYG{n}{fopen}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}q7.dat\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}w+b\PYGZdq{}}\PYG{p}{);} \PYG{c+c1}{//open q7.dat in write mode}
+            \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+            \PYG{k}{while} \PYG{p}{(}\PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{n}\PYG{p}{)}
+            \PYG{p}{\PYGZob{}}
+                \PYG{k}{if} \PYG{p}{(}\PYG{n}{employe}\PYG{p}{[}\PYG{n}{i}\PYG{p}{].}\PYG{n}{number} \PYG{o}{==} \PYG{n}{number}\PYG{p}{)}
+                    \PYG{n}{employe}\PYG{p}{[}\PYG{n}{i}\PYG{p}{].}\PYG{n}{gross\PYGZus{}salary} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+                \PYG{c+c1}{//rewrite every entry except for removed employee salary=0}
+                \PYG{n}{fwrite}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{employe}\PYG{p}{[}\PYG{n}{i}\PYG{p}{],} \PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{employe}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]),} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{fio}\PYG{p}{);}
+                \PYG{n}{fflush}\PYG{p}{(}\PYG{n}{stdin}\PYG{p}{);}
+                \PYG{o}{++}\PYG{n}{i}\PYG{p}{;}
+            \PYG{p}{\PYGZcb{}}
+            \PYG{n}{fclose}\PYG{p}{(}\PYG{n}{fio}\PYG{p}{);}
+            \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Record Deleted\PYGZdq{}}\PYG{p}{);}
+            \PYG{k}{break}\PYG{p}{;}
+        \PYG{k}{case} \PYG{l+m+mi}{3}\PYG{o}{:}
+            \PYG{n}{n} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+            \PYG{n}{fio} \PYG{o}{=} \PYG{n}{fopen}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}q7.dat\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}rb\PYGZdq{}}\PYG{p}{);} \PYG{c+c1}{//open q7.dat in read mode}
+            \PYG{k}{if} \PYG{p}{(}\PYG{n}{fio} \PYG{o}{==} \PYG{n+nb}{NULL}\PYG{p}{)}
+            \PYG{p}{\PYGZob{}}
+                \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Cannot open file\PYGZdq{}}\PYG{p}{);}
+                \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+            \PYG{p}{\PYGZcb{}}
+            \PYG{k}{else}
+            \PYG{p}{\PYGZob{}}
+                \PYG{k}{while} \PYG{p}{(}\PYG{n}{fread}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{Employee}\PYG{p}{,} \PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{Employee}\PYG{p}{),} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{fio}\PYG{p}{)} \PYG{o}{==} \PYG{l+m+mi}{1}\PYG{p}{)}
+                \PYG{p}{\PYGZob{}}
+                    \PYG{n}{employe}\PYG{p}{[}\PYG{n}{n}\PYG{p}{].}\PYG{n}{number} \PYG{o}{=} \PYG{n}{Employee}\PYG{p}{.}\PYG{n}{number}\PYG{p}{;}
+                    \PYG{n}{strcpy}\PYG{p}{(}\PYG{n}{employe}\PYG{p}{[}\PYG{n}{n}\PYG{p}{].}\PYG{n}{name}\PYG{p}{,} \PYG{n}{Employee}\PYG{p}{.}\PYG{n}{name}\PYG{p}{);}
+                    \PYG{n}{employe}\PYG{p}{[}\PYG{n}{n}\PYG{p}{].}\PYG{n}{sex} \PYG{o}{=} \PYG{n}{Employee}\PYG{p}{.}\PYG{n}{sex}\PYG{p}{;}
+                    \PYG{n}{employe}\PYG{p}{[}\PYG{n}{n}\PYG{p}{].}\PYG{n}{gross\PYGZus{}salary} \PYG{o}{=} \PYG{n}{Employee}\PYG{p}{.}\PYG{n}{gross\PYGZus{}salary}\PYG{p}{;}
+                    \PYG{o}{++}\PYG{n}{n}\PYG{p}{;}
+                \PYG{p}{\PYGZcb{}}
+            \PYG{p}{\PYGZcb{}}
+            \PYG{n}{fclose}\PYG{p}{(}\PYG{n}{fio}\PYG{p}{);}
+            \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} Enter the serial number of employee: \PYGZdq{}}\PYG{p}{);}
+            \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{number}\PYG{p}{);}
+            \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} Enter new salary: \PYGZdq{}}\PYG{p}{);}
+            \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}f\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{salary}\PYG{p}{);}
+            \PYG{n}{fio} \PYG{o}{=} \PYG{n}{fopen}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}q7.dat\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}w+b\PYGZdq{}}\PYG{p}{);} \PYG{c+c1}{//open q7.dat in write mode}
+            \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+            \PYG{k}{while} \PYG{p}{(}\PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{n}\PYG{p}{)}
+            \PYG{p}{\PYGZob{}}
+                \PYG{k}{if} \PYG{p}{(}\PYG{n}{employe}\PYG{p}{[}\PYG{n}{i}\PYG{p}{].}\PYG{n}{number} \PYG{o}{==} \PYG{n}{number}\PYG{p}{)}
+                    \PYG{n}{employe}\PYG{p}{[}\PYG{n}{i}\PYG{p}{].}\PYG{n}{gross\PYGZus{}salary} \PYG{o}{=} \PYG{n}{salary}\PYG{p}{;}
+                \PYG{c+c1}{//rewrite every entry except for modified employee salary}
+                \PYG{n}{fwrite}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{employe}\PYG{p}{[}\PYG{n}{i}\PYG{p}{],} \PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{employe}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]),} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{fio}\PYG{p}{);}
+                \PYG{n}{fflush}\PYG{p}{(}\PYG{n}{stdin}\PYG{p}{);}
+                \PYG{o}{++}\PYG{n}{i}\PYG{p}{;}
+            \PYG{p}{\PYGZcb{}}
+            \PYG{n}{fclose}\PYG{p}{(}\PYG{n}{fio}\PYG{p}{);}
+            \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Record Modified\PYGZdq{}}\PYG{p}{);}
+            \PYG{k}{break}\PYG{p}{;}
+        \PYG{k}{case} \PYG{l+m+mi}{4}\PYG{o}{:}
+            \PYG{n}{print\PYGZus{}all}\PYG{p}{();}
+            \PYG{k}{break}\PYG{p}{;}
+        \PYG{k}{default}\PYG{o}{:}
+            \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Wrong choice\PYGZdq{}}\PYG{p}{);}
+            \PYG{k}{break}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}c\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{temp}\PYG{p}{);}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Again? \PYGZdq{}}\PYG{p}{);}
+        \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}c\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{ch}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}} \PYG{k}{while} \PYG{p}{(}\PYG{n}{ch} \PYG{o}{==} \PYG{l+s+sc}{\PYGZsq{}y\PYGZsq{}} \PYG{o}{||} \PYG{n}{ch} \PYG{o}{==} \PYG{l+s+sc}{\PYGZsq{}Y\PYGZsq{}}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{int} \PYG{n+nf}{print\PYGZus{}all}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{FILE} \PYG{o}{*}\PYG{n}{fio}\PYG{p}{;}
+    \PYG{n}{fio} \PYG{o}{=} \PYG{n}{fopen}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}q7.dat\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}rb\PYGZdq{}}\PYG{p}{);} \PYG{c+c1}{//open q7.dat in read mode}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{fio} \PYG{o}{==} \PYG{n+nb}{NULL}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Cannot open file\PYGZdq{}}\PYG{p}{);}
+        \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{else}
+    \PYG{p}{\PYGZob{}}
+        \PYG{k}{while} \PYG{p}{(}\PYG{n}{fread}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{Employee}\PYG{p}{,} \PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{Employee}\PYG{p}{),} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{fio}\PYG{p}{)} \PYG{o}{==} \PYG{l+m+mi}{1}\PYG{p}{)}
+        \PYG{p}{\PYGZob{}}
+            \PYG{k}{if} \PYG{p}{(}\PYG{n}{Employee}\PYG{p}{.}\PYG{n}{gross\PYGZus{}salary} \PYG{o}{!=} \PYG{l+m+mi}{0}\PYG{p}{)}
+            \PYG{p}{\PYGZob{}}
+                \PYG{n}{print\PYGZus{}employee}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{Employee}\PYG{p}{);}
+                \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+            \PYG{p}{\PYGZcb{}}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{n}{fclose}\PYG{p}{(}\PYG{n}{fio}\PYG{p}{);}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

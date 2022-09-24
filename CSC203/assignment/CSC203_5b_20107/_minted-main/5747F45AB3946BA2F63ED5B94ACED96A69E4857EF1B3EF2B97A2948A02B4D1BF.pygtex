@@ -1,0 +1,42 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k+kt}{int} \PYG{n}{a}\PYG{p}{[}\PYG{l+m+mi}{10}\PYG{p}{][}\PYG{l+m+mi}{10}\PYG{p}{],} \PYG{n}{b}\PYG{p}{[}\PYG{l+m+mi}{10}\PYG{p}{][}\PYG{l+m+mi}{10}\PYG{p}{],} \PYG{n}{c}\PYG{p}{[}\PYG{l+m+mi}{10}\PYG{p}{][}\PYG{l+m+mi}{10}\PYG{p}{],} \PYG{n}{i}\PYG{p}{,} \PYG{n}{j}\PYG{p}{,} \PYG{n}{k}\PYG{p}{,} \PYG{n}{m}\PYG{p}{,} \PYG{n}{n}\PYG{p}{,} \PYG{n}{o}\PYG{p}{,} \PYG{n}{p}\PYG{p}{;}
+
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Enter the order of 1st matrix: \PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{m}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{n}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Enter 1st matrix: }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{for} \PYG{p}{(}\PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{m}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+        \PYG{k}{for} \PYG{p}{(}\PYG{n}{j} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{j} \PYG{o}{\PYGZlt{}} \PYG{n}{n}\PYG{p}{;} \PYG{o}{++}\PYG{n}{j}\PYG{p}{)}
+            \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{a}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][}\PYG{n}{j}\PYG{p}{]);}  \PYG{c+c1}{//input 1st matrix element\PYGZhy{}wise}
+    
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Enter the order of 2nd matrix: \PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{o}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{p}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Enter 2nd matrix: }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{for} \PYG{p}{(}\PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{o}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+        \PYG{k}{for} \PYG{p}{(}\PYG{n}{j} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{j} \PYG{o}{\PYGZlt{}} \PYG{n}{p}\PYG{p}{;} \PYG{o}{++}\PYG{n}{j}\PYG{p}{)}
+            \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{b}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][}\PYG{n}{j}\PYG{p}{]);}  \PYG{c+c1}{//input 2nd matrix element\PYGZhy{}wise}
+    
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{n} \PYG{o}{!=} \PYG{n}{o}\PYG{p}{)}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Matrix multiplication not possible.\PYGZdq{}}\PYG{p}{);}   \PYG{c+c1}{//if no. of columns of 1st matrix are not equal to no. of rows of 2nd matrix}
+    \PYG{k}{else}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Final matrix: }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+        \PYG{k}{for} \PYG{p}{(}\PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{m}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+        \PYG{p}{\PYGZob{}}
+            \PYG{k}{for} \PYG{p}{(}\PYG{n}{j} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{j} \PYG{o}{\PYGZlt{}} \PYG{n}{p}\PYG{p}{;} \PYG{o}{++}\PYG{n}{j}\PYG{p}{)}
+            \PYG{p}{\PYGZob{}}
+                \PYG{n}{c}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][}\PYG{n}{j}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+                \PYG{k}{for} \PYG{p}{(}\PYG{n}{k} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{k} \PYG{o}{\PYGZlt{}} \PYG{n}{n}\PYG{p}{;} \PYG{o}{++}\PYG{n}{k}\PYG{p}{)}
+                    \PYG{n}{c}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][}\PYG{n}{j}\PYG{p}{]} \PYG{o}{+=} \PYG{n}{a}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][}\PYG{n}{k}\PYG{p}{]} \PYG{o}{*} \PYG{n}{b}\PYG{p}{[}\PYG{n}{k}\PYG{p}{][}\PYG{n}{j}\PYG{p}{];}   \PYG{c+c1}{//multiplying row of first matrix to corresponding column of 2nd matrix}
+                \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d \PYGZdq{}}\PYG{p}{,} \PYG{n}{c}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][}\PYG{n}{j}\PYG{p}{]);}
+            \PYG{p}{\PYGZcb{}}
+            \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

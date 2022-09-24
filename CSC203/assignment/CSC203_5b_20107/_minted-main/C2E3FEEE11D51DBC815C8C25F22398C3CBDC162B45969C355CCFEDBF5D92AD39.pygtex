@@ -1,0 +1,101 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdlib.h\PYGZgt{}}
+\PYG{k+kt}{float} \PYG{n+nf}{mean}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{a}\PYG{p}{[],} \PYG{k+kt}{int} \PYG{n}{n}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{s} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{i}\PYG{p}{;}
+    \PYG{k}{for} \PYG{p}{(}\PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{n}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+        \PYG{n}{s} \PYG{o}{+=} \PYG{n}{a}\PYG{p}{[}\PYG{n}{i}\PYG{p}{];}           \PYG{c+c1}{//sum all the numbers in the array}
+    \PYG{k}{return} \PYG{p}{(((}\PYG{k+kt}{float}\PYG{p}{)}\PYG{n}{s}\PYG{p}{)} \PYG{o}{/} \PYG{n}{n}\PYG{p}{);} \PYG{c+c1}{//return sum/n;}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k+kt}{int} \PYG{n}{i}\PYG{p}{,} \PYG{n}{j}\PYG{p}{;}
+    \PYG{k+kt}{int} \PYG{n}{Grades}\PYG{p}{[}\PYG{l+m+mi}{5}\PYG{p}{][}\PYG{l+m+mi}{20}\PYG{p}{];} \PYG{c+c1}{//3a}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{a) Array is initialized as Grades[5][20]\PYGZdq{}}\PYG{p}{);}
+
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{b) There are \PYGZpc{}d rows in the array.\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{);} \PYG{c+c1}{//3b}
+
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{c) There are \PYGZpc{}d columns in the array.\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{20}\PYG{p}{);} \PYG{c+c1}{//3c}
+
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{d) There are \PYGZpc{}d elements in the array.\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{5} \PYG{o}{*} \PYG{l+m+mi}{20}\PYG{p}{);} \PYG{c+c1}{//3d}
+
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{e) Names of all elements in the first column of array: \PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{for} \PYG{p}{(}\PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{5}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}dx0, \PYGZdq{}}\PYG{p}{,} \PYG{n}{i}\PYG{p}{);} \PYG{c+c1}{//3e}
+
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{f) Name of the element in the third row and second column of the array: \PYGZpc{}dx\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{);} \PYG{c+c1}{//3f}
+
+    \PYG{n}{Grades}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{][}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{100}\PYG{p}{;} \PYG{c+c1}{//3g}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{g) Element in the first row and second column: \PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{Grades}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{][}\PYG{l+m+mi}{1}\PYG{p}{]);}
+
+    \PYG{k+kt}{double} \PYG{n}{mathGrades}\PYG{p}{[}\PYG{l+m+mi}{20}\PYG{p}{];}
+    \PYG{k}{for} \PYG{p}{(}\PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{20}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+        \PYG{n}{mathGrades}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{p}{(}\PYG{n}{rand}\PYG{p}{()} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{9}\PYG{p}{)} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{;} \PYG{c+c1}{//assign random grades to mathGrades from 1\PYGZhy{}9}
+
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{h) Enter the elements of array Grades: }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{for} \PYG{p}{(}\PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{5}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Row \PYGZpc{}d: }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{i} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{);}
+        \PYG{k}{for} \PYG{p}{(}\PYG{n}{j} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{j} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{20}\PYG{p}{;} \PYG{o}{++}\PYG{n}{j}\PYG{p}{)}
+            \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{Grades}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][}\PYG{n}{j}\PYG{p}{]);} \PYG{c+c1}{//3h}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{i) The array after initialization with 0: }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{for} \PYG{p}{(}\PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{5}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{k}{for} \PYG{p}{(}\PYG{n}{j} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{j} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{20}\PYG{p}{;} \PYG{o}{++}\PYG{n}{j}\PYG{p}{)}
+        \PYG{p}{\PYGZob{}}
+            \PYG{n}{Grades}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][}\PYG{n}{j}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{c+c1}{//3i}
+            \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d \PYGZdq{}}\PYG{p}{,} \PYG{n}{Grades}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][}\PYG{n}{j}\PYG{p}{]);}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{j) First rwo of Grades after copying from mathGrades: }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{for} \PYG{p}{(}\PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{20}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{Grades}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{][}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{n}{mathGrades}\PYG{p}{[}\PYG{n}{i}\PYG{p}{];} \PYG{c+c1}{//3j}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d \PYGZdq{}}\PYG{p}{,} \PYG{n}{Grades}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{][}\PYG{n}{i}\PYG{p}{]);}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{k) The greatest number in the first row is: \PYGZdq{}}\PYG{p}{);}
+    \PYG{k+kt}{int} \PYG{n}{big} \PYG{o}{=} \PYG{n}{Grades}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{][}\PYG{l+m+mi}{0}\PYG{p}{];}
+    \PYG{k}{for} \PYG{p}{(}\PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{20}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{Grades}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{][}\PYG{n}{i}\PYG{p}{]} \PYG{o}{\PYGZgt{}} \PYG{n}{big}\PYG{p}{)}
+            \PYG{n}{big} \PYG{o}{=} \PYG{n}{Grades}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{][}\PYG{n}{i}\PYG{p}{];}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{big}\PYG{p}{);}
+
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{l) Elements of column 2 of array: \PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{for} \PYG{p}{(}\PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{5}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d \PYGZdq{}}\PYG{p}{,} \PYG{n}{Grades}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][}\PYG{l+m+mi}{1}\PYG{p}{]);}
+
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{m) The average of the elements in the first row: \PYGZpc{}f\PYGZdq{}}\PYG{p}{,} \PYG{n}{mean}\PYG{p}{(}\PYG{n}{Grades}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{],} \PYG{l+m+mi}{20}\PYG{p}{));}
+
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{n) The final array in tabular form: }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{for} \PYG{p}{(}\PYG{n}{i} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{5}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{k}{for} \PYG{p}{(}\PYG{n}{j} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{;} \PYG{n}{j} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{20}\PYG{p}{;} \PYG{o}{++}\PYG{n}{j}\PYG{p}{)}
+        \PYG{p}{\PYGZob{}}
+            \PYG{k}{if} \PYG{p}{(}\PYG{n}{i} \PYG{o}{==} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}
+            \PYG{p}{\PYGZob{}}
+                \PYG{k}{if} \PYG{p}{(}\PYG{n}{j} \PYG{o}{==} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}
+                    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}    \PYGZdq{}}\PYG{p}{);}
+                \PYG{k}{else}
+                    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}  \PYGZpc{}c \PYGZdq{}}\PYG{p}{,} \PYG{n}{j} \PYG{o}{+} \PYG{l+m+mi}{65}\PYG{p}{);}
+            \PYG{p}{\PYGZcb{}}
+            \PYG{k}{else}
+            \PYG{p}{\PYGZob{}}
+                \PYG{k}{if} \PYG{p}{(}\PYG{n}{j} \PYG{o}{==} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}
+                    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d)  \PYGZdq{}}\PYG{p}{,} \PYG{n}{i} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{);}
+                \PYG{k}{else}
+                    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}  \PYGZpc{}d \PYGZdq{}}\PYG{p}{,} \PYG{n}{Grades}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][}\PYG{n}{j}\PYG{p}{]);}
+            \PYG{p}{\PYGZcb{}}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

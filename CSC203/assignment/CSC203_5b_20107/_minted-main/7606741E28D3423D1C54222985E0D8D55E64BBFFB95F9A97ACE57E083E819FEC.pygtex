@@ -1,0 +1,28 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdlib.h\PYGZgt{}}
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k+kt}{int} \PYG{n}{r}\PYG{p}{,} \PYG{n}{i}\PYG{p}{;}
+    \PYG{k+kt}{char} \PYG{n}{a}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{][}\PYG{l+m+mi}{36000}\PYG{p}{];}
+    \PYG{k}{for} \PYG{p}{(}\PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{36000}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{r} \PYG{o}{=} \PYG{p}{(}\PYG{n}{rand}\PYG{p}{()} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{2}\PYG{p}{);}   \PYG{c+c1}{//assign 0 or 1 on random to r}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{r}\PYG{p}{)}
+        \PYG{p}{\PYGZob{}}
+            \PYG{n}{a}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{][}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{l+s+sc}{\PYGZsq{}H\PYGZsq{}}\PYG{p}{;}
+            \PYG{n}{a}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{][}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{l+s+sc}{\PYGZsq{}T\PYGZsq{}}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{k}{else}
+        \PYG{p}{\PYGZob{}}
+            \PYG{n}{a}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{][}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{l+s+sc}{\PYGZsq{}T\PYGZsq{}}\PYG{p}{;}
+            \PYG{n}{a}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{][}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{l+s+sc}{\PYGZsq{}H\PYGZsq{}}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}c \PYGZpc{}c\PYGZdq{}}\PYG{p}{,} \PYG{n}{a}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{][}\PYG{n}{i}\PYG{p}{],} \PYG{n}{a}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{][}\PYG{n}{i}\PYG{p}{]);}  \PYG{c+c1}{//print the result of 1 toss of both dice}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}t}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

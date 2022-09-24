@@ -1,0 +1,116 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdlib.h\PYGZgt{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}string.h\PYGZgt{}}
+
+\PYG{k}{struct} \PYG{n}{library}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{accession\PYGZus{}number}\PYG{p}{;}
+    \PYG{k+kt}{char} \PYG{n}{title}\PYG{p}{[}\PYG{l+m+mi}{30}\PYG{p}{];}
+    \PYG{k+kt}{char} \PYG{n}{author}\PYG{p}{[}\PYG{l+m+mi}{20}\PYG{p}{];}
+    \PYG{k+kt}{float} \PYG{n}{price}\PYG{p}{;}
+    \PYG{k+kt}{int} \PYG{n}{flag}\PYG{p}{;}
+\PYG{p}{\PYGZcb{};}
+\PYG{c+c1}{// bubble sort to sort in ascending order}
+\PYG{k+kt}{void} \PYG{n+nf}{bubble\PYGZus{}sort}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{a}\PYG{p}{[],} \PYG{k+kt}{int} \PYG{n}{n}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{i}\PYG{p}{,} \PYG{n}{j}\PYG{p}{,} \PYG{n}{t}\PYG{p}{;}
+    \PYG{k}{for} \PYG{p}{(}\PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{n}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+        \PYG{k}{for} \PYG{p}{(}\PYG{n}{j} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{j} \PYG{o}{\PYGZlt{}} \PYG{n}{n} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{;} \PYG{o}{++}\PYG{n}{j}\PYG{p}{)}
+            \PYG{k}{if} \PYG{p}{(}\PYG{n}{a}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]} \PYG{o}{\PYGZgt{}} \PYG{n}{a}\PYG{p}{[}\PYG{n}{j} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{])}
+            \PYG{p}{\PYGZob{}}
+                \PYG{n}{t} \PYG{o}{=} \PYG{n}{a}\PYG{p}{[}\PYG{n}{j}\PYG{p}{];}
+                \PYG{n}{a}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]} \PYG{o}{=} \PYG{n}{a}\PYG{p}{[}\PYG{n}{j} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{];}
+                \PYG{n}{a}\PYG{p}{[}\PYG{n}{j} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{=} \PYG{n}{t}\PYG{p}{;}
+            \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{c+c1}{// to print details of a book}
+\PYG{k+kt}{void} \PYG{n+nf}{print\PYGZus{}book}\PYG{p}{(}\PYG{k}{struct} \PYG{n}{library} \PYG{o}{*}\PYG{n}{book}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Accesion Number: \PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{book}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{accession\PYGZus{}number}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Book Title: \PYGZpc{}s\PYGZdq{}}\PYG{p}{,} \PYG{n}{book}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{title}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Author Name: \PYGZpc{}s\PYGZdq{}}\PYG{p}{,} \PYG{n}{book}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{author}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Price: \PYGZpc{}f\PYGZdq{}}\PYG{p}{,} \PYG{n}{book}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{price}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Issued: \PYGZpc{}s\PYGZdq{}}\PYG{p}{,} \PYG{n}{book}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{flag} \PYG{o}{?} \PYG{l+s}{\PYGZdq{}Yes\PYGZdq{}} \PYG{o}{:} \PYG{l+s}{\PYGZdq{}No\PYGZdq{}}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\PYG{c+c1}{// declaring values for 5 students}
+\PYG{k}{struct} \PYG{n}{library} \PYG{n}{books}\PYG{p}{[}\PYG{l+m+mi}{5}\PYG{p}{]} \PYG{o}{=} \PYG{p}{\PYGZob{}\PYGZob{}}\PYG{l+m+mi}{2005}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Harry Potter\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Rowling\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{800}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{\PYGZcb{},}
+                           \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{2009}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}The Fault in Our Stars\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Green\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{300}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{\PYGZcb{},}
+                           \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{2003}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}A Brief History Of Time\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Hawkings\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{1000}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{\PYGZcb{},}
+                           \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{2015}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}The Theory of Everything\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Hawkings\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{1500}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{\PYGZcb{},}
+                           \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{2001}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Turtles all the way down\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Green\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{200}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{\PYGZcb{}\PYGZcb{};}
+
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k+kt}{int} \PYG{n}{ch}\PYG{p}{,} \PYG{n}{count} \PYG{o}{=} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{n}{acc}\PYG{p}{,} \PYG{n}{accn}\PYG{p}{[}\PYG{l+m+mi}{5}\PYG{p}{];}
+    \PYG{k+kt}{char} \PYG{n}{aut}\PYG{p}{[}\PYG{l+m+mi}{20}\PYG{p}{];}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ }\PYG{l+s+se}{\PYGZbs{}t\PYGZbs{}t}\PYG{l+s}{ LIBRARY }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ 1. Add Book Information\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ 2. Display book information\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ 3. List all books of given author\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ 4. List the title of specified book\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ 5. List the count of books in the library\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ 6. List the books in the order of accession number\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ 7. Exit\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Enter your choice: \PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{ch}\PYG{p}{);}
+    \PYG{k}{switch} \PYG{p}{(}\PYG{n}{ch}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+    \PYG{k}{case} \PYG{l+m+mi}{1}\PYG{o}{:} \PYG{c+c1}{// Add Book Information}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{Enter book information:\PYGZhy{} }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} Accesion Number: \PYGZdq{}}\PYG{p}{);}
+        \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{books}\PYG{p}{[}\PYG{n}{count}\PYG{p}{].}\PYG{n}{accession\PYGZus{}number}\PYG{p}{);}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} Book Title: \PYGZdq{}}\PYG{p}{);}
+        \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}s\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{books}\PYG{p}{[}\PYG{n}{count}\PYG{p}{].}\PYG{n}{title}\PYG{p}{);}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} Author Name: \PYGZdq{}}\PYG{p}{);}
+        \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}s\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{books}\PYG{p}{[}\PYG{n}{count}\PYG{p}{].}\PYG{n}{author}\PYG{p}{);}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} Price: \PYGZdq{}}\PYG{p}{);}
+        \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}f\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{books}\PYG{p}{[}\PYG{n}{count}\PYG{p}{].}\PYG{n}{price}\PYG{p}{);}
+        \PYG{n}{books}\PYG{p}{[}\PYG{n}{count}\PYG{p}{].}\PYG{n}{flag} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+        \PYG{n}{count}\PYG{o}{++}\PYG{p}{;}
+        \PYG{k}{break}\PYG{p}{;}
+    \PYG{k}{case} \PYG{l+m+mi}{2}\PYG{o}{:} \PYG{c+c1}{// Display book information}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Accesion Number: \PYGZdq{}}\PYG{p}{);}
+        \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{acc}\PYG{p}{);}
+        \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{count}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+            \PYG{k}{if} \PYG{p}{(}\PYG{n}{books}\PYG{p}{[}\PYG{n}{i}\PYG{p}{].}\PYG{n}{accession\PYGZus{}number} \PYG{o}{==} \PYG{n}{acc}\PYG{p}{)}
+                \PYG{n}{print\PYGZus{}book}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{books}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]);}
+        \PYG{k}{break}\PYG{p}{;}
+    \PYG{k}{case} \PYG{l+m+mi}{3}\PYG{o}{:} \PYG{c+c1}{// List all books of given author}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Author Name: \PYGZdq{}}\PYG{p}{);}
+        \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}s\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{aut}\PYG{p}{);}
+        \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{count}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+            \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{strcmp}\PYG{p}{(}\PYG{n}{books}\PYG{p}{[}\PYG{n}{i}\PYG{p}{].}\PYG{n}{author}\PYG{p}{,} \PYG{n}{aut}\PYG{p}{))}
+                \PYG{n}{print\PYGZus{}book}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{books}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]);}
+        \PYG{k}{break}\PYG{p}{;}
+    \PYG{k}{case} \PYG{l+m+mi}{4}\PYG{o}{:} \PYG{c+c1}{// List the title of specified book}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Accesion Number: \PYGZdq{}}\PYG{p}{);}
+        \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{acc}\PYG{p}{);}
+        \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{count}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+            \PYG{k}{if} \PYG{p}{(}\PYG{n}{books}\PYG{p}{[}\PYG{n}{i}\PYG{p}{].}\PYG{n}{accession\PYGZus{}number} \PYG{o}{==} \PYG{n}{acc}\PYG{p}{)}
+                \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Book Title: \PYGZpc{}s\PYGZdq{}}\PYG{p}{,} \PYG{n}{books}\PYG{p}{[}\PYG{n}{i}\PYG{p}{].}\PYG{n}{title}\PYG{p}{);}
+        \PYG{k}{break}\PYG{p}{;}
+    \PYG{k}{case} \PYG{l+m+mi}{5}\PYG{o}{:} \PYG{c+c1}{// List the count of books in the library}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ The no. of books; \PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{count}\PYG{p}{);}
+        \PYG{k}{break}\PYG{p}{;}
+    \PYG{k}{case} \PYG{l+m+mi}{6}\PYG{o}{:} \PYG{c+c1}{// List the books in the order of accession number}
+        \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{count}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+            \PYG{n}{accn}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{n}{books}\PYG{p}{[}\PYG{n}{i}\PYG{p}{].}\PYG{n}{accession\PYGZus{}number}\PYG{p}{;}
+        \PYG{n}{bubble\PYGZus{}sort}\PYG{p}{(}\PYG{n}{accn}\PYG{p}{,} \PYG{n}{count}\PYG{p}{);} \PYG{c+c1}{// to arrange accession no. in ascending order}
+        \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{count}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+            \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{j} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{j} \PYG{o}{\PYGZlt{}} \PYG{n}{count}\PYG{p}{;} \PYG{o}{++}\PYG{n}{j}\PYG{p}{)}
+                \PYG{k}{if} \PYG{p}{(}\PYG{n}{books}\PYG{p}{[}\PYG{n}{j}\PYG{p}{].}\PYG{n}{accession\PYGZus{}number} \PYG{o}{==} \PYG{n}{accn}\PYG{p}{[}\PYG{n}{i}\PYG{p}{])} \PYG{c+c1}{// printing in ascending order}
+                    \PYG{n}{print\PYGZus{}book}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{books}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]);}
+        \PYG{k}{break}\PYG{p}{;}
+    \PYG{k}{case} \PYG{l+m+mi}{7}\PYG{o}{:} \PYG{c+c1}{// Exit}
+        \PYG{n}{exit}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{);}
+        \PYG{k}{break}\PYG{p}{;}
+    \PYG{k}{default}\PYG{o}{:}
+        \PYG{k}{break}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

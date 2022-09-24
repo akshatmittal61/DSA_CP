@@ -1,0 +1,42 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{k}{struct} \PYG{n}{full\PYGZus{}date}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{date}\PYG{p}{,} \PYG{n}{month}\PYG{p}{,} \PYG{n}{year}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}} \PYG{n}{Date}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{];}
+\PYG{k+kt}{void} \PYG{n+nf}{enter\PYGZus{}date}\PYG{p}{(}\PYG{k}{struct} \PYG{n}{full\PYGZus{}date} \PYG{o}{*}\PYG{n}{DATE}\PYG{p}{)} \PYG{c+c1}{//to input date}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Enter date: \PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{p}{(}\PYG{n}{DATE}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{date}\PYG{p}{));}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} Enter month: \PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{p}{(}\PYG{n}{DATE}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{month}\PYG{p}{));}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} Enter year: \PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{p}{(}\PYG{n}{DATE}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{year}\PYG{p}{));}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{void} \PYG{n+nf}{print\PYGZus{}date}\PYG{p}{(}\PYG{k}{struct} \PYG{n}{full\PYGZus{}date} \PYG{o}{*}\PYG{n}{DATE}\PYG{p}{)} \PYG{c+c1}{//to output date}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d / \PYGZpc{}d / \PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{p}{(}\PYG{n}{DATE}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{date}\PYG{p}{),} \PYG{p}{(}\PYG{n}{DATE}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{month}\PYG{p}{),} \PYG{p}{(}\PYG{n}{DATE}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{year}\PYG{p}{));}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Enter 1st date: }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{enter\PYGZus{}date}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{Date}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Enter 2nd date: }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{enter\PYGZus{}date}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{Date}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]);}
+    \PYG{c+c1}{//input for both date have been taken}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{print\PYGZus{}date}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{Date}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} and \PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{print\PYGZus{}date}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{Date}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]);}
+    \PYG{c+c1}{//comparing date, month and year of both date}
+    \PYG{k}{if} \PYG{p}{((}\PYG{n}{Date}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{].}\PYG{n}{date} \PYG{o}{==} \PYG{n}{Date}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{].}\PYG{n}{date}\PYG{p}{)} \PYG{o}{\PYGZam{}\PYGZam{}}
+        \PYG{p}{(}\PYG{n}{Date}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{].}\PYG{n}{month} \PYG{o}{==} \PYG{n}{Date}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{].}\PYG{n}{month}\PYG{p}{)} \PYG{o}{\PYGZam{}\PYGZam{}}
+        \PYG{p}{(}\PYG{n}{Date}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{].}\PYG{n}{year} \PYG{o}{==} \PYG{n}{Date}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{].}\PYG{n}{year}\PYG{p}{))}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} are equal.\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{else}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} are not equal.\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

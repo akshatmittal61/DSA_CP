@@ -1,0 +1,26 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k+kt}{char} \PYG{n}{str}\PYG{p}{[]} \PYG{o}{=} \PYG{l+s}{\PYGZdq{}Hello Adam 1*2\PYGZsh{}3\PYGZdq{}}\PYG{p}{;}
+    \PYG{k+kt}{int} \PYG{n}{alphabets} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{digits} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{special} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{k+kt}{char} \PYG{o}{*}\PYG{n}{s} \PYG{o}{=} \PYG{n}{str}\PYG{p}{;}
+    \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{s}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{!=} \PYG{l+s+sc}{\PYGZsq{}\PYGZbs{}0\PYGZsq{}}\PYG{p}{;)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{k}{if} \PYG{p}{((}\PYG{o}{*}\PYG{n}{s} \PYG{o}{\PYGZgt{}=} \PYG{l+s+sc}{\PYGZsq{}A\PYGZsq{}} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{o}{*}\PYG{n}{s} \PYG{o}{\PYGZlt{}=} \PYG{l+s+sc}{\PYGZsq{}Z\PYGZsq{}}\PYG{p}{)} \PYG{o}{||} \PYG{p}{(}\PYG{o}{*}\PYG{n}{s} \PYG{o}{\PYGZgt{}=} \PYG{l+s+sc}{\PYGZsq{}a\PYGZsq{}} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{o}{*}\PYG{n}{s} \PYG{o}{\PYGZlt{}=} \PYG{l+s+sc}{\PYGZsq{}z\PYGZsq{}}\PYG{p}{))}
+            \PYG{o}{++}\PYG{n}{alphabets}\PYG{p}{;}
+        \PYG{k}{else} \PYG{k}{if} \PYG{p}{(}\PYG{o}{*}\PYG{n}{s} \PYG{o}{\PYGZgt{}=} \PYG{l+s+sc}{\PYGZsq{}0\PYGZsq{}} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{o}{*}\PYG{n}{s} \PYG{o}{\PYGZlt{}=} \PYG{l+s+sc}{\PYGZsq{}9\PYGZsq{}}\PYG{p}{)}
+            \PYG{o}{++}\PYG{n}{digits}\PYG{p}{;}
+        \PYG{k}{else} \PYG{k}{if} \PYG{p}{(}\PYG{o}{*}\PYG{n}{s} \PYG{o}{!=} \PYG{l+s+sc}{\PYGZsq{} \PYGZsq{}}\PYG{p}{)}
+            \PYG{o}{++}\PYG{n}{special}\PYG{p}{;}  \PYG{c+c1}{//if charcater is not alphabet, number or space}
+        \PYG{o}{*}\PYG{n}{s}\PYG{o}{++}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}String: \PYGZpc{}s}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{str}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Alphabets: \PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{alphabets}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Digits: \PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{digits}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Special characters: \PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{special}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,33 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdlib.h\PYGZgt{}}
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k+kt}{int} \PYG{n}{a}\PYG{p}{,} \PYG{n}{num}\PYG{p}{;}
+    \PYG{k+kt}{char} \PYG{n}{c}\PYG{p}{,} \PYG{n}{temp}\PYG{p}{;}
+    \PYG{n+nl}{start}\PYG{p}{:}
+    \PYG{n}{num} \PYG{o}{=} \PYG{p}{(}\PYG{n}{rand}\PYG{p}{()} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{1000}\PYG{p}{)} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{;}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{I have a number between 1 and 1000\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{Can you guess my number?\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{Please type your first guess: \PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{do}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ a: \PYGZdq{}}\PYG{p}{);}
+        \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{a}\PYG{p}{);}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{a} \PYG{o}{\PYGZgt{}} \PYG{n}{num}\PYG{p}{)}
+            \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Too High. Try Again\PYGZdq{}}\PYG{p}{);}
+        \PYG{k}{else} \PYG{k}{if} \PYG{p}{(}\PYG{n}{a} \PYG{o}{\PYGZlt{}} \PYG{n}{num}\PYG{p}{)}
+            \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Too Low. Try Again\PYGZdq{}}\PYG{p}{);}
+        \PYG{k}{else}
+            \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Excellent! You guessed the number!\PYGZdq{}}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}} \PYG{k}{while} \PYG{p}{(}\PYG{n}{a} \PYG{o}{!=} \PYG{n}{num}\PYG{p}{);}
+    \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}c\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{temp}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{Would you like to play again (y or n)?\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}c\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{c}\PYG{p}{);}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{c} \PYG{o}{==} \PYG{l+s+sc}{\PYGZsq{}y\PYGZsq{}} \PYG{o}{||} \PYG{n}{c} \PYG{o}{==} \PYG{l+s+sc}{\PYGZsq{}Y\PYGZsq{}}\PYG{p}{)}
+        \PYG{k}{goto} \PYG{n}{start}\PYG{p}{;}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

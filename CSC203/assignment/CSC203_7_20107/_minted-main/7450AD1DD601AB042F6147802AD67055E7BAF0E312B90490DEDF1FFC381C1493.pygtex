@@ -1,0 +1,36 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{k}{union} \PYG{n}{party\PYGZus{}items}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{char} \PYG{n}{name}\PYG{p}{[}\PYG{l+m+mi}{20}\PYG{p}{];}
+    \PYG{k+kt}{int} \PYG{n}{price}\PYG{p}{;}
+    \PYG{k+kt}{int} \PYG{n}{quantity}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}} \PYG{n}{item}\PYG{p}{[}\PYG{l+m+mi}{50}\PYG{p}{];}
+\PYG{c+c1}{// to input details of new item}
+\PYG{k+kt}{void} \PYG{n+nf}{read\PYGZus{}item}\PYG{p}{(}\PYG{k}{union} \PYG{n}{party\PYGZus{}items} \PYG{o}{*}\PYG{n}{item}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{Enter details:\PYGZhy{} }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} Name: \PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}s\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{p}{(}\PYG{n}{item}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{name}\PYG{p}{));}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} Price: \PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{p}{(}\PYG{n}{item}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{price}\PYG{p}{));}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} Enter quantity: \PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{p}{(}\PYG{n}{item}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{quantity}\PYG{p}{));}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Price: \PYGZpc{}d }\PYG{l+s+se}{\PYGZbs{}t}\PYG{l+s}{ Quantity: \PYGZpc{}d}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{p}{(}\PYG{n}{item}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{price}\PYG{p}{),} \PYG{p}{(}\PYG{n}{item}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{quantity}\PYG{p}{));}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k+kt}{int} \PYG{n}{count}\PYG{p}{;}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Enter the no. of items (\PYGZlt{}=50): \PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{count}\PYG{p}{);}
+    \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{count}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+        \PYG{n}{read\PYGZus{}item}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{item}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]);}
+    \PYG{k+kt}{float} \PYG{n}{total} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{count}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+        \PYG{n}{total} \PYG{o}{+=} \PYG{n}{item}\PYG{p}{[}\PYG{n}{i}\PYG{p}{].}\PYG{n}{price} \PYG{o}{*} \PYG{n}{item}\PYG{p}{[}\PYG{n}{i}\PYG{p}{].}\PYG{n}{quantity}\PYG{p}{;} \PYG{c+c1}{// to calculate total amount}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{ The total amount to be paid is: \PYGZpc{}f\PYGZdq{}}\PYG{p}{,} \PYG{n}{total}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

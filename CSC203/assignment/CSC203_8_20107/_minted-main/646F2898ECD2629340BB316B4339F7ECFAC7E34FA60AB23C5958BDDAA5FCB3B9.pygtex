@@ -1,0 +1,46 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k+kt}{FILE} \PYG{o}{*}\PYG{n}{fio}\PYG{p}{;}
+    \PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{k+kt}{char} \PYG{n}{ch}\PYG{p}{,} \PYG{n}{str}\PYG{p}{[}\PYG{l+m+mi}{1000}\PYG{p}{];}
+    \PYG{n}{fio} \PYG{o}{=} \PYG{n}{fopen}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}TRIAL.TXT\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}r\PYGZdq{}}\PYG{p}{);} \PYG{c+c1}{//opening trial.txt in read mode}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{fio} \PYG{o}{==} \PYG{n+nb}{NULL}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Unable to locate the file\PYGZdq{}}\PYG{p}{);}
+        \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{else}
+    \PYG{p}{\PYGZob{}}
+        \PYG{k}{do}
+        \PYG{p}{\PYGZob{}}
+            \PYG{n}{ch} \PYG{o}{=} \PYG{n}{getc}\PYG{p}{(}\PYG{n}{fio}\PYG{p}{);} \PYG{c+c1}{//getting file in string by character}
+            \PYG{k}{if} \PYG{p}{(}\PYG{n}{ch} \PYG{o}{==} \PYG{l+s+sc}{\PYGZsq{}\PYGZbs{}n\PYGZsq{}}\PYG{p}{)}
+                \PYG{n}{ch} \PYG{o}{=} \PYG{l+s+sc}{\PYGZsq{} \PYGZsq{}}\PYG{p}{;} \PYG{c+c1}{//replacing new line feed by \PYGZsq{} \PYGZsq{}}
+            \PYG{n}{str}\PYG{p}{[}\PYG{n}{i}\PYG{o}{++}\PYG{p}{]} \PYG{o}{=} \PYG{n}{ch}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}} \PYG{k}{while} \PYG{p}{(}\PYG{n}{ch} \PYG{o}{!=} \PYG{n}{EOF}\PYG{p}{);}
+        \PYG{n}{str}\PYG{p}{[}\PYG{n}{i} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{=} \PYG{l+s+sc}{\PYGZsq{}\PYGZbs{}0\PYGZsq{}}\PYG{p}{;} \PYG{c+c1}{//to terminate string without file terminator character}
+        \PYG{n}{fclose}\PYG{p}{(}\PYG{n}{fio}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k+kt}{int} \PYG{n}{j} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{k} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{l} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ The string: }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZpc{}s\PYGZdq{}}\PYG{p}{,} \PYG{n}{str}\PYG{p}{);}
+    \PYG{k}{for} \PYG{p}{(}\PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{str}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{!=} \PYG{l+s+sc}{\PYGZsq{}\PYGZbs{}0\PYGZsq{}}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{o}{++}\PYG{n}{j}\PYG{p}{;}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{str}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{==} \PYG{l+s+sc}{\PYGZsq{} \PYGZsq{}} \PYG{o}{||} \PYG{n}{str}\PYG{p}{[}\PYG{n}{i} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{==} \PYG{l+s+sc}{\PYGZsq{}\PYGZbs{}0\PYGZsq{}}\PYG{p}{)}
+        \PYG{p}{\PYGZob{}}
+            \PYG{o}{++}\PYG{n}{k}\PYG{p}{;} \PYG{c+c1}{//counting total words}
+            \PYG{k}{if} \PYG{p}{((}\PYG{n}{j} \PYG{o}{==} \PYG{l+m+mi}{5}\PYG{p}{)} \PYG{o}{||} \PYG{p}{(}\PYG{n}{j} \PYG{o}{==} \PYG{l+m+mi}{4} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{str}\PYG{p}{[}\PYG{n}{i} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{==} \PYG{l+s+sc}{\PYGZsq{}\PYGZbs{}0\PYGZsq{}}\PYG{p}{))}
+                \PYG{o}{++}\PYG{n}{l}\PYG{p}{;} \PYG{c+c1}{//counting 4 letter words}
+            \PYG{n}{j} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{ No. of words: \PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{k}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{ 4 letter words: \PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{l}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

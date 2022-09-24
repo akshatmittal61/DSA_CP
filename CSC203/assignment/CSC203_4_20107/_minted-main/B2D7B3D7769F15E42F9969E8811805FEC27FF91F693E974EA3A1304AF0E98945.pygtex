@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{c+c1}{// \PYGZsh{}include\PYGZlt{}math.h\PYGZgt{}}
+\PYG{k+kt}{double} \PYG{n+nf}{roundToTenths}\PYG{p}{(}\PYG{k+kt}{double} \PYG{n}{a}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{double} \PYG{n}{b}\PYG{p}{;}
+    \PYG{n}{b}\PYG{o}{=}\PYG{p}{(}\PYG{k+kt}{int}\PYG{p}{)((}\PYG{n}{a}\PYG{o}{+}\PYG{l+m+mi}{5}\PYG{p}{)}\PYG{o}{/}\PYG{l+m+mi}{10}\PYG{p}{);}
+    \PYG{n}{b}\PYG{o}{*=}\PYG{l+m+mi}{10}\PYG{p}{;}
+    \PYG{k}{return} \PYG{n}{b}\PYG{p}{;}    
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{c+cm}{/* double a=237.7,b;}
+\PYG{c+cm}{    b=(int)((a+5)/10);}
+\PYG{c+cm}{    b*=10;}
+\PYG{c+cm}{    printf(\PYGZdq{}\PYGZbs{}n a: \PYGZpc{}f \PYGZbs{}n b: \PYGZpc{}f\PYGZdq{},a,b); */}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}f\PYGZdq{}}\PYG{p}{,}\PYG{n}{roundToTenths}\PYG{p}{(}\PYG{l+m+mf}{234.56}\PYG{p}{))}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

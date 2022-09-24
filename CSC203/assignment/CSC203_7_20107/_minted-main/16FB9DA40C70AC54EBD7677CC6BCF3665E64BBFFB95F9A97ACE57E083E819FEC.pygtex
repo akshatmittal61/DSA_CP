@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k+kt}{int} \PYG{n}{a} \PYG{o}{=} \PYG{l+m+mi}{5}\PYG{p}{;}
+    \PYG{k+kt}{int} \PYG{o}{*}\PYG{n}{b}\PYG{p}{;}
+    \PYG{n}{b} \PYG{o}{=} \PYG{o}{\PYGZam{}}\PYG{n}{a}\PYG{p}{;}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}The address of variable \PYGZsq{}a\PYGZsq{} with value \PYGZpc{}d:}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ \PYGZpc{}p\PYGZdq{}}\PYG{p}{,} \PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{p}{);}
+    \PYG{c+c1}{// \PYGZam{} is used for reference}
+    \PYG{c+c1}{// * is for de\PYGZhy{}referencing}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

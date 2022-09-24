@@ -1,0 +1,26 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k+kt}{char} \PYG{n}{str}\PYG{p}{[]} \PYG{o}{=} \PYG{l+s}{\PYGZdq{}Wait for me to come home\PYGZdq{}}\PYG{p}{;}
+    \PYG{k+kt}{char} \PYG{o}{*}\PYG{n}{s} \PYG{o}{=} \PYG{n}{str}\PYG{p}{;}
+    \PYG{k+kt}{int} \PYG{n}{length} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{i}\PYG{p}{,} \PYG{n}{j} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{k}\PYG{p}{;}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ The original string: }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZpc{}s\PYGZdq{}}\PYG{p}{,} \PYG{n}{str}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ The reversed string: }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{for} \PYG{p}{(}\PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{str}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{!=} \PYG{l+s+sc}{\PYGZsq{}\PYGZbs{}0\PYGZsq{}}\PYG{p}{;)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{k}{for} \PYG{p}{(}\PYG{n}{length} \PYG{o}{=} \PYG{n}{j}\PYG{p}{;} \PYG{n}{str}\PYG{p}{[}\PYG{n}{length}\PYG{p}{]} \PYG{o}{!=} \PYG{l+s+sc}{\PYGZsq{} \PYGZsq{}} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{str}\PYG{p}{[}\PYG{n}{length}\PYG{p}{]} \PYG{o}{!=} \PYG{l+s+sc}{\PYGZsq{}\PYGZbs{}0\PYGZsq{}}\PYG{p}{;} \PYG{o}{++}\PYG{n}{length}\PYG{p}{);}
+        \PYG{c+c1}{//length of next word}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{i} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{)}
+            \PYG{n}{i} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{;}
+        \PYG{o}{++}\PYG{n}{i}\PYG{p}{;}
+        \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{k} \PYG{o}{=} \PYG{n}{length} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{;} \PYG{n}{k} \PYG{o}{\PYGZgt{}=} \PYG{n}{j} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{str}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{!=} \PYG{l+s+sc}{\PYGZsq{}\PYGZbs{}0\PYGZsq{}}\PYG{p}{;} \PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{n}{k}\PYG{p}{,} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+            \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}c\PYGZdq{}}\PYG{p}{,} \PYG{o}{*}\PYG{p}{(}\PYG{n}{s} \PYG{o}{+} \PYG{n}{k}\PYG{p}{));} \PYG{c+c1}{//printing the from backwards}
+        \PYG{n}{j} \PYG{o}{=} \PYG{n}{length} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{;}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} \PYGZdq{}}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

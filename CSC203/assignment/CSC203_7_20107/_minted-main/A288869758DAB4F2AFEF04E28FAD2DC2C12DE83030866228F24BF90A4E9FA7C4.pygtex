@@ -1,0 +1,48 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdlib.h\PYGZgt{}}
+\PYG{k}{struct} \PYG{n}{account}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{account\PYGZus{}number}\PYG{p}{;}
+    \PYG{k+kt}{char} \PYG{n}{name}\PYG{p}{[}\PYG{l+m+mi}{20}\PYG{p}{];}
+    \PYG{k+kt}{float} \PYG{n}{balance}\PYG{p}{;}
+\PYG{p}{\PYGZcb{};}
+\PYG{k}{struct} \PYG{n}{account} \PYG{n}{customer}\PYG{p}{[}\PYG{l+m+mi}{5}\PYG{p}{]} \PYG{o}{=} \PYG{p}{\PYGZob{}\PYGZob{}}\PYG{l+m+mi}{8300}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Jonas\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{450}\PYG{p}{\PYGZcb{},}
+                              \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{2600}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Martha\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{40}\PYG{p}{\PYGZcb{},}
+                              \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{8700}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Klaus\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{200}\PYG{p}{\PYGZcb{},}
+                              \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{4500}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Stefen\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{300}\PYG{p}{\PYGZcb{},}
+                              \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{8600}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Caroline\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{400}\PYG{p}{\PYGZcb{}\PYGZcb{};} \PYG{c+c1}{//values for 5 customers}
+\PYG{k+kt}{void} \PYG{n+nf}{print\PYGZus{}account}\PYG{p}{(}\PYG{k}{struct} \PYG{n}{account} \PYG{o}{*}\PYG{n}{cust}\PYG{p}{)}                \PYG{c+c1}{//input details of customer}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Account number: \PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{cust}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{account\PYGZus{}number}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Name: \PYGZpc{}s\PYGZdq{}}\PYG{p}{,} \PYG{n}{cust}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{name}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Balance: \PYGZpc{}f\PYGZdq{}}\PYG{p}{,} \PYG{n}{cust}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{balance}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{void} \PYG{n+nf}{print\PYGZus{}below\PYGZus{}100}\PYG{p}{(}\PYG{k}{struct} \PYG{n}{account} \PYG{o}{*}\PYG{n}{cust}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{cust}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{balance} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{100}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Account number: \PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{cust}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{account\PYGZus{}number}\PYG{p}{);}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Name: \PYGZpc{}s\PYGZdq{}}\PYG{p}{,} \PYG{n}{cust}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{name}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k+kt}{int} \PYG{n}{i}\PYG{p}{,} \PYG{n}{j}\PYG{p}{,} \PYG{n}{choice}\PYG{p}{,} \PYG{n}{acc}\PYG{p}{,} \PYG{n}{am}\PYG{p}{;}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Below listed accounts have balance low than 100\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{for} \PYG{p}{(}\PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{5}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+        \PYG{n}{print\PYGZus{}below\PYGZus{}100}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{customer}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]);} \PYG{c+c1}{//if balance\PYGZlt{}100 call print\PYGZus{}below();}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{ Enter account number: \PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{acc}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Enter balance: \PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{am}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ How can we serve you? \PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{  0. Withdrawal\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{  1. Deposit}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ \PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{choice}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ The balance is insufficinet for the specified withdrawal/deposit\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

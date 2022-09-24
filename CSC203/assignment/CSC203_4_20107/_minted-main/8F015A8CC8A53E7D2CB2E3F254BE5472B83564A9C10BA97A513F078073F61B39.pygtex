@@ -1,0 +1,58 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}math.h\PYGZgt{}}
+\PYG{k+kt}{float} \PYG{n+nf}{distance}\PYG{p}{(}\PYG{k+kt}{float} \PYG{n}{x1}\PYG{p}{,} \PYG{k+kt}{float} \PYG{n}{y1}\PYG{p}{,} \PYG{k+kt}{float} \PYG{n}{x2}\PYG{p}{,} \PYG{k+kt}{float} \PYG{n}{y2}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k}{return} \PYG{n}{sqrt}\PYG{p}{((}\PYG{n}{pow}\PYG{p}{((}\PYG{n}{x2} \PYG{o}{\PYGZhy{}} \PYG{n}{x1}\PYG{p}{),} \PYG{l+m+mi}{2}\PYG{p}{))} \PYG{o}{+} \PYG{p}{(}\PYG{n}{pow}\PYG{p}{((}\PYG{n}{y2} \PYG{o}{\PYGZhy{}} \PYG{n}{y1}\PYG{p}{),} \PYG{l+m+mi}{2}\PYG{p}{)));}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{float} \PYG{n+nf}{area}\PYG{p}{(}\PYG{k+kt}{float} \PYG{n}{x1}\PYG{p}{,} \PYG{k+kt}{float} \PYG{n}{y1}\PYG{p}{,} \PYG{k+kt}{float} \PYG{n}{x2}\PYG{p}{,} \PYG{k+kt}{float} \PYG{n}{y2}\PYG{p}{,} \PYG{k+kt}{float} \PYG{n}{x3}\PYG{p}{,} \PYG{k+kt}{float} \PYG{n}{y3}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{float} \PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{p}{,} \PYG{n}{c}\PYG{p}{,} \PYG{n}{s}\PYG{p}{;}
+    \PYG{n}{a} \PYG{o}{=} \PYG{n}{distance}\PYG{p}{(}\PYG{n}{x1}\PYG{p}{,} \PYG{n}{y1}\PYG{p}{,} \PYG{n}{x2}\PYG{p}{,} \PYG{n}{y2}\PYG{p}{);}
+    \PYG{n}{b} \PYG{o}{=} \PYG{n}{distance}\PYG{p}{(}\PYG{n}{x2}\PYG{p}{,} \PYG{n}{y2}\PYG{p}{,} \PYG{n}{x3}\PYG{p}{,} \PYG{n}{y3}\PYG{p}{);}
+    \PYG{n}{c} \PYG{o}{=} \PYG{n}{distance}\PYG{p}{(}\PYG{n}{x3}\PYG{p}{,} \PYG{n}{y3}\PYG{p}{,} \PYG{n}{x1}\PYG{p}{,} \PYG{n}{y1}\PYG{p}{);}
+    \PYG{n}{s} \PYG{o}{=} \PYG{p}{(}\PYG{n}{a} \PYG{o}{+} \PYG{n}{b} \PYG{o}{+} \PYG{n}{c}\PYG{p}{)} \PYG{o}{/} \PYG{l+m+mi}{2}\PYG{p}{;}
+    \PYG{k}{return} \PYG{n}{sqrt}\PYG{p}{(}\PYG{n}{s} \PYG{o}{*} \PYG{p}{(}\PYG{n}{s} \PYG{o}{\PYGZhy{}} \PYG{n}{a}\PYG{p}{)} \PYG{o}{*} \PYG{p}{(}\PYG{n}{s} \PYG{o}{\PYGZhy{}} \PYG{n}{b}\PYG{p}{)} \PYG{o}{*} \PYG{p}{(}\PYG{n}{s} \PYG{o}{\PYGZhy{}} \PYG{n}{c}\PYG{p}{));}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{int} \PYG{n+nf}{check}\PYG{p}{(}\PYG{k+kt}{float} \PYG{n}{x}\PYG{p}{,} \PYG{k+kt}{float} \PYG{n}{y}\PYG{p}{,} \PYG{k+kt}{float} \PYG{n}{x1}\PYG{p}{,} \PYG{k+kt}{float} \PYG{n}{y1}\PYG{p}{,} \PYG{k+kt}{float} \PYG{n}{x2}\PYG{p}{,} \PYG{k+kt}{float} \PYG{n}{y2}\PYG{p}{,} \PYG{k+kt}{float} \PYG{n}{x3}\PYG{p}{,} \PYG{k+kt}{float} \PYG{n}{y3}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{float} \PYG{n}{area\PYGZus{}PAB} \PYG{o}{=} \PYG{n}{area}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{,} \PYG{n}{x1}\PYG{p}{,} \PYG{n}{y1}\PYG{p}{,} \PYG{n}{x2}\PYG{p}{,} \PYG{n}{y2}\PYG{p}{);}
+    \PYG{k+kt}{float} \PYG{n}{area\PYGZus{}PBC} \PYG{o}{=} \PYG{n}{area}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{,} \PYG{n}{x2}\PYG{p}{,} \PYG{n}{y2}\PYG{p}{,} \PYG{n}{x3}\PYG{p}{,} \PYG{n}{y3}\PYG{p}{);}
+    \PYG{k+kt}{float} \PYG{n}{area\PYGZus{}PCA} \PYG{o}{=} \PYG{n}{area}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{,} \PYG{n}{x3}\PYG{p}{,} \PYG{n}{y3}\PYG{p}{,} \PYG{n}{x1}\PYG{p}{,} \PYG{n}{y1}\PYG{p}{);}
+    \PYG{k+kt}{float} \PYG{n}{tot} \PYG{o}{=} \PYG{n}{area\PYGZus{}PAB} \PYG{o}{+} \PYG{n}{area\PYGZus{}PBC} \PYG{o}{+} \PYG{n}{area\PYGZus{}PCA}\PYG{p}{;}
+    \PYG{k+kt}{float} \PYG{n}{area\PYGZus{}ABC} \PYG{o}{=} \PYG{n}{area}\PYG{p}{(}\PYG{n}{x1}\PYG{p}{,} \PYG{n}{y1}\PYG{p}{,} \PYG{n}{x2}\PYG{p}{,} \PYG{n}{y2}\PYG{p}{,} \PYG{n}{x3}\PYG{p}{,} \PYG{n}{y3}\PYG{p}{);}
+    \PYG{k}{if} \PYG{p}{((}\PYG{k+kt}{int}\PYG{p}{)}\PYG{n}{tot} \PYG{o}{==} \PYG{p}{(}\PYG{k+kt}{int}\PYG{p}{)(}\PYG{n}{area\PYGZus{}ABC}\PYG{p}{))}
+        \PYG{k}{return} \PYG{l+m+mi}{1}\PYG{p}{;}
+    \PYG{k}{else}
+        \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k+kt}{float} \PYG{n}{x1}\PYG{p}{,} \PYG{n}{y1}\PYG{p}{,} \PYG{n}{x2}\PYG{p}{,} \PYG{n}{y2}\PYG{p}{,} \PYG{n}{x3}\PYG{p}{,} \PYG{n}{y3}\PYG{p}{,} \PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{;}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Enter the coordiantes of triangle: }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} x1: \PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}f\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{x1}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} y1: \PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}f\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{y1}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} x2: \PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}f\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{x2}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} y2: \PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}f\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{y2}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} x3: \PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}f\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{x3}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} y3: \PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}f\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{y3}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Enter the coordinates of point to be checked: }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} x: \PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}f\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{x}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} y: \PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}f\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{y}\PYG{p}{);}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{check}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{,} \PYG{n}{x1}\PYG{p}{,} \PYG{n}{y1}\PYG{p}{,} \PYG{n}{x2}\PYG{p}{,} \PYG{n}{y2}\PYG{p}{,} \PYG{n}{x3}\PYG{p}{,} \PYG{n}{y3}\PYG{p}{))}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Yes P lies inside triangle ABC\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{else}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}No P does not lies inside triangle ABC\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,37 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k+kt}{int} \PYG{n}{lower} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{upper} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{number} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{spaces} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{special} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{;}
+    \PYG{c+c1}{//special=\PYGZhy{}1 to neglect last terminating character provided by file pointer}
+    \PYG{k+kt}{char} \PYG{n}{ch}\PYG{p}{;}
+    \PYG{k+kt}{FILE} \PYG{o}{*}\PYG{n}{fio}\PYG{p}{;}
+    \PYG{n}{fio} \PYG{o}{=} \PYG{n}{fopen}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}q11.txt\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}r\PYGZdq{}}\PYG{p}{);} \PYG{c+c1}{//open q11.txt in read mode}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ The string: }\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{ \PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{do}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{ch} \PYG{o}{=} \PYG{n}{fgetc}\PYG{p}{(}\PYG{n}{fio}\PYG{p}{);}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}c\PYGZdq{}}\PYG{p}{,} \PYG{n}{ch}\PYG{p}{);}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{ch} \PYG{o}{\PYGZgt{}=} \PYG{l+s+sc}{\PYGZsq{}0\PYGZsq{}} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{ch} \PYG{o}{\PYGZlt{}=} \PYG{l+s+sc}{\PYGZsq{}9\PYGZsq{}}\PYG{p}{)}
+            \PYG{o}{++}\PYG{n}{number}\PYG{p}{;} \PYG{c+c1}{//for digits}
+        \PYG{k}{else} \PYG{k}{if} \PYG{p}{(}\PYG{n}{ch} \PYG{o}{\PYGZgt{}=} \PYG{l+s+sc}{\PYGZsq{}A\PYGZsq{}} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{ch} \PYG{o}{\PYGZlt{}=} \PYG{l+s+sc}{\PYGZsq{}Z\PYGZsq{}}\PYG{p}{)}
+            \PYG{o}{++}\PYG{n}{upper}\PYG{p}{;} \PYG{c+c1}{//for upppercase characters}
+        \PYG{k}{else} \PYG{k}{if} \PYG{p}{(}\PYG{n}{ch} \PYG{o}{\PYGZgt{}=} \PYG{l+s+sc}{\PYGZsq{}a\PYGZsq{}} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{ch} \PYG{o}{\PYGZlt{}=} \PYG{l+s+sc}{\PYGZsq{}z\PYGZsq{}}\PYG{p}{)}
+            \PYG{o}{++}\PYG{n}{lower}\PYG{p}{;} \PYG{c+c1}{//for upppercase characters}
+        \PYG{k}{else} \PYG{k}{if} \PYG{p}{(}\PYG{n}{ch} \PYG{o}{==} \PYG{l+s+sc}{\PYGZsq{} \PYGZsq{}}\PYG{p}{)}
+            \PYG{o}{++}\PYG{n}{spaces}\PYG{p}{;} \PYG{c+c1}{//for spaces}
+        \PYG{k}{else}
+            \PYG{o}{++}\PYG{n}{special}\PYG{p}{;} \PYG{c+c1}{//for special characters}
+    \PYG{p}{\PYGZcb{}} \PYG{k}{while} \PYG{p}{(}\PYG{n}{ch} \PYG{o}{!=} \PYG{n}{EOF}\PYG{p}{);}
+    \PYG{n}{fclose}\PYG{p}{(}\PYG{n}{fio}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ No. of uppercase characters: \PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{upper}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ No. of lowercase characters: \PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{lower}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ No. of digits: \PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{number}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ No. of spaces: \PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{spaces}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ No. of special characters: \PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{special}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{k}{union} \PYG{n}{share}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{i}\PYG{p}{;}
+    \PYG{k+kt}{char} \PYG{n}{ch}\PYG{p}{;}
+\PYG{p}{\PYGZcb{};}  \PYG{c+c1}{// union of an interger and charcater}
+\PYG{k}{union} \PYG{n}{share} \PYG{n}{cnvt}\PYG{p}{;}
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{cnvt}\PYG{p}{.}\PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{65}\PYG{p}{;}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Integer:  \PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{cnvt}\PYG{p}{.}\PYG{n}{i}\PYG{p}{);}  \PYG{c+c1}{// 65}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Character: \PYGZpc{}c\PYGZdq{}}\PYG{p}{,} \PYG{n}{cnvt}\PYG{p}{.}\PYG{n}{ch}\PYG{p}{);}    \PYG{c+c1}{// char(65) = A}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

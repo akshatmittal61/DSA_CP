@@ -1,0 +1,43 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{c+c1}{// \PYGZsh{}include\PYGZlt{}math.h\PYGZgt{}}
+\PYG{k+kt}{double} \PYG{n+nf}{roundToInteger}\PYG{p}{(}\PYG{k+kt}{double} \PYG{n}{a}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{double} \PYG{n}{b}\PYG{p}{;}
+    \PYG{n}{b}\PYG{o}{=}\PYG{p}{(}\PYG{k+kt}{int}\PYG{p}{)((}\PYG{n}{a}\PYG{o}{+}\PYG{l+m+mf}{0.5}\PYG{p}{)}\PYG{o}{/}\PYG{l+m+mi}{1}\PYG{p}{);}
+    \PYG{n}{b}\PYG{o}{*=}\PYG{l+m+mi}{1}\PYG{p}{;}
+    \PYG{k}{return} \PYG{n}{b}\PYG{p}{;}    
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{double} \PYG{n+nf}{roundToTenths}\PYG{p}{(}\PYG{k+kt}{double} \PYG{n}{a}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{double} \PYG{n}{b}\PYG{p}{;}
+    \PYG{n}{b}\PYG{o}{=}\PYG{p}{(}\PYG{k+kt}{int}\PYG{p}{)((}\PYG{n}{a}\PYG{o}{+}\PYG{l+m+mi}{5}\PYG{p}{)}\PYG{o}{/}\PYG{l+m+mi}{10}\PYG{p}{);}
+    \PYG{n}{b}\PYG{o}{*=}\PYG{l+m+mi}{10}\PYG{p}{;}
+    \PYG{k}{return} \PYG{n}{b}\PYG{p}{;}    
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{double} \PYG{n+nf}{roundToHundreds}\PYG{p}{(}\PYG{k+kt}{double} \PYG{n}{a}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{double} \PYG{n}{b}\PYG{p}{;}
+    \PYG{n}{b}\PYG{o}{=}\PYG{p}{(}\PYG{k+kt}{int}\PYG{p}{)((}\PYG{n}{a}\PYG{o}{+}\PYG{l+m+mi}{50}\PYG{p}{)}\PYG{o}{/}\PYG{l+m+mi}{100}\PYG{p}{);}
+    \PYG{n}{b}\PYG{o}{*=}\PYG{l+m+mi}{100}\PYG{p}{;}
+    \PYG{k}{return} \PYG{n}{b}\PYG{p}{;}    
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{double} \PYG{n+nf}{roundToThousands}\PYG{p}{(}\PYG{k+kt}{double} \PYG{n}{a}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{double} \PYG{n}{b}\PYG{p}{;}
+    \PYG{n}{b}\PYG{o}{=}\PYG{p}{(}\PYG{k+kt}{int}\PYG{p}{)((}\PYG{n}{a}\PYG{o}{+}\PYG{l+m+mi}{500}\PYG{p}{)}\PYG{o}{/}\PYG{l+m+mi}{1000}\PYG{p}{);}
+    \PYG{n}{b}\PYG{o}{*=}\PYG{l+m+mi}{1000}\PYG{p}{;}
+    \PYG{k}{return} \PYG{n}{b}\PYG{p}{;}    
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+\PYG{c+cm}{/*     double a=9634.57,b;}
+\PYG{c+cm}{    b=(int)((a+500)/1000);}
+\PYG{c+cm}{    b*=1000;}
+\PYG{c+cm}{    printf(\PYGZdq{}\PYGZbs{}n a: \PYGZpc{}f \PYGZbs{}n b: \PYGZpc{}f\PYGZdq{},a,b); */}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}f}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZpc{}f}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZpc{}f}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZpc{}f}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,}\PYG{n}{roundToInteger}\PYG{p}{(}\PYG{l+m+mf}{238.56}\PYG{p}{),}\PYG{n}{roundToTenths}\PYG{p}{(}\PYG{l+m+mf}{238.56}\PYG{p}{),}\PYG{n}{roundToHundreds}\PYG{p}{(}\PYG{l+m+mf}{238.56}\PYG{p}{),}\PYG{n}{roundToThousands}\PYG{p}{(}\PYG{l+m+mf}{238.56}\PYG{p}{));}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

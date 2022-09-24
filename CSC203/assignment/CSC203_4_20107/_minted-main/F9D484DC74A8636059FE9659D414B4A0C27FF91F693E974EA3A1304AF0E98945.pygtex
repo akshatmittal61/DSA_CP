@@ -1,0 +1,29 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{c+c1}{// \PYGZsh{}include\PYGZlt{}math.h\PYGZgt{}}
+\PYG{k+kt}{double} \PYG{n+nf}{roundToTenths}\PYG{p}{(}\PYG{k+kt}{double} \PYG{n}{a}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{double} \PYG{n}{b}\PYG{p}{;}
+    \PYG{n}{b}\PYG{o}{=}\PYG{p}{(}\PYG{k+kt}{int}\PYG{p}{)((}\PYG{n}{a}\PYG{o}{+}\PYG{l+m+mi}{5}\PYG{p}{)}\PYG{o}{/}\PYG{l+m+mi}{10}\PYG{p}{);}
+    \PYG{n}{b}\PYG{o}{*=}\PYG{l+m+mi}{10}\PYG{p}{;}
+    \PYG{k}{return} \PYG{n}{b}\PYG{p}{;}    
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{double} \PYG{n+nf}{roundToHundreds}\PYG{p}{(}\PYG{k+kt}{double} \PYG{n}{a}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{double} \PYG{n}{b}\PYG{p}{;}
+    \PYG{n}{b}\PYG{o}{=}\PYG{p}{(}\PYG{k+kt}{int}\PYG{p}{)((}\PYG{n}{a}\PYG{o}{+}\PYG{l+m+mi}{5}\PYG{p}{)}\PYG{o}{/}\PYG{l+m+mi}{10}\PYG{p}{);}
+    \PYG{n}{b}\PYG{o}{*=}\PYG{l+m+mi}{100}\PYG{p}{;}
+    \PYG{k}{return} \PYG{n}{b}\PYG{p}{;}    
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k+kt}{double} \PYG{n}{a}\PYG{o}{=}\PYG{l+m+mi}{250}\PYG{p}{,}\PYG{n}{b}\PYG{p}{;}
+    \PYG{n}{b}\PYG{o}{=}\PYG{p}{(}\PYG{k+kt}{int}\PYG{p}{)((}\PYG{n}{a}\PYG{o}{+}\PYG{l+m+mi}{50}\PYG{p}{)}\PYG{o}{/}\PYG{l+m+mi}{100}\PYG{p}{);}
+    \PYG{n}{b}\PYG{o}{*=}\PYG{l+m+mi}{100}\PYG{p}{;}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ a: \PYGZpc{}f }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ b: \PYGZpc{}f\PYGZdq{}}\PYG{p}{,}\PYG{n}{a}\PYG{p}{,}\PYG{n}{b}\PYG{p}{);}
+    \PYG{c+c1}{// printf(\PYGZdq{}\PYGZpc{}f\PYGZdq{},roundToTenths(238.56));}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

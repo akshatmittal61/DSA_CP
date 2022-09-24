@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k+kt}{FILE} \PYG{o}{*}\PYG{n}{fio}\PYG{p}{;}
+    \PYG{n}{fio} \PYG{o}{=} \PYG{n}{fopen}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}TRIAL.TXT\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}r\PYGZdq{}}\PYG{p}{);} \PYG{c+c1}{//open trial.txt in read mode}
+    \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{fio}\PYG{p}{)}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Cannot open\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{else}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{fseek}\PYG{p}{(}\PYG{n}{fio}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{SEEK\PYGZus{}END}\PYG{p}{);} \PYG{c+c1}{//to put file pointer at the end}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}ld bytes \PYGZpc{}f KB\PYGZdq{}}\PYG{p}{,} \PYG{n}{ftello}\PYG{p}{(}\PYG{n}{fio}\PYG{p}{),} \PYG{p}{(}\PYG{k+kt}{float}\PYG{p}{)}\PYG{n}{ftello}\PYG{p}{(}\PYG{n}{fio}\PYG{p}{)} \PYG{o}{/} \PYG{l+m+mi}{1024}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{n}{fclose}\PYG{p}{(}\PYG{n}{fio}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

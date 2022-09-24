@@ -1,0 +1,41 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{k+kt}{int} \PYG{n+nf}{isprime}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{n}\PYG{p}{)} \PYG{c+c1}{//function to check whether the number is prime or not}
+\PYG{p}{\PYGZob{}}
+   \PYG{k+kt}{int} \PYG{n}{i}\PYG{p}{,} \PYG{n}{k} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+   \PYG{k}{for} \PYG{p}{(}\PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{2}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{n}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+   \PYG{p}{\PYGZob{}}
+      \PYG{k}{if} \PYG{p}{(}\PYG{n}{n} \PYG{o}{\PYGZpc{}} \PYG{n}{i} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{)}
+         \PYG{o}{++}\PYG{n}{k}\PYG{p}{;} \PYG{c+c1}{//if n is not divisible by any other number than 1 or itself k remains 0}
+   \PYG{p}{\PYGZcb{}}
+   \PYG{k}{if} \PYG{p}{(}\PYG{n}{k} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{)}
+      \PYG{k}{return} \PYG{l+m+mi}{1}\PYG{p}{;} \PYG{c+c1}{//return true if k==0 i.e.) n is not divisible by any other no.}
+   \PYG{k}{else}
+      \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{c+c1}{//otherwise return false}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+   \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+   \PYG{k+kt}{int} \PYG{n}{a}\PYG{p}{[}\PYG{l+m+mi}{100}\PYG{p}{],} \PYG{n}{i}\PYG{p}{,} \PYG{n}{j}\PYG{p}{,} \PYG{n}{k}\PYG{p}{,} \PYG{n}{n} \PYG{o}{=} \PYG{l+m+mi}{100}\PYG{p}{;}
+   \PYG{k}{for} \PYG{p}{(}\PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{n}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+      \PYG{n}{a}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{n}{i} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{;} \PYG{c+c1}{//allot 1\PYGZhy{}100 to array}
+   \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Before sorting: }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+   \PYG{k}{for} \PYG{p}{(}\PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{n}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+      \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d  \PYGZdq{}}\PYG{p}{,} \PYG{n}{a}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]);}
+   \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+   \PYG{k}{for} \PYG{p}{(}\PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{n}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+   \PYG{p}{\PYGZob{}}
+      \PYG{k}{if} \PYG{p}{(}\PYG{n}{isprime}\PYG{p}{(}\PYG{n}{a}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]))}
+      \PYG{p}{\PYGZob{}}
+         \PYG{k}{for} \PYG{p}{(}\PYG{n}{j} \PYG{o}{=} \PYG{n}{i}\PYG{p}{;} \PYG{n}{j} \PYG{o}{\PYGZlt{}} \PYG{n}{n}\PYG{p}{;} \PYG{o}{++}\PYG{n}{j}\PYG{p}{)}
+            \PYG{n}{a}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]} \PYG{o}{=} \PYG{n}{a}\PYG{p}{[}\PYG{n}{j} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{];} \PYG{c+c1}{//if a[i] is prime replace the next element by the present element \PYGZam{} continue until the end is reached}
+         \PYG{n}{n}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{p}{;}                \PYG{c+c1}{//array size will be decreased by 1 after every one removal}
+      \PYG{p}{\PYGZcb{}}
+   \PYG{p}{\PYGZcb{}}
+   \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ After sorting: }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+   \PYG{k}{for} \PYG{p}{(}\PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{n}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+      \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d }\PYG{l+s+se}{\PYGZbs{}t}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{a}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]);}
+   \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+   \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

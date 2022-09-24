@@ -1,0 +1,48 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{k}{struct} \PYG{n}{Date}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{date}\PYG{p}{,} \PYG{n}{month}\PYG{p}{,} \PYG{n}{year}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}\PYG{n}{current\PYGZus{}date}\PYG{p}{;}
+\PYG{k}{struct} \PYG{n}{employee}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{code}\PYG{p}{;}
+    \PYG{k+kt}{char} \PYG{n}{name}\PYG{p}{[}\PYG{l+m+mi}{20}\PYG{p}{];}
+    \PYG{k}{struct} \PYG{n}{Date} \PYG{n}{doj}\PYG{p}{;}
+\PYG{p}{\PYGZcb{};}
+\PYG{k+kt}{void} \PYG{n+nf}{print\PYGZus{}employee}\PYG{p}{(}\PYG{k}{struct} \PYG{n}{employee} \PYG{o}{*}\PYG{n}{employes}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Employee Code: \PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{employes}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{code}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Employee Name: \PYGZpc{}s\PYGZdq{}}\PYG{p}{,} \PYG{n}{employes}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{name}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Employee Date of joining: \PYGZpc{}d / \PYGZpc{}d / \PYGZpc{}d\PYGZdq{}}\PYG{p}{,} 
+            \PYG{n}{employes}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{doj}\PYG{p}{.}\PYG{n}{date}\PYG{p}{,} \PYG{n}{employes}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{doj}\PYG{p}{.}\PYG{n}{month}\PYG{p}{,} \PYG{n}{employes}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{doj}\PYG{p}{.}\PYG{n}{year}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}\PYG{c+c1}{//declaring values for 5 employes}
+\PYG{k}{struct} \PYG{n}{employee} \PYG{n}{employes}\PYG{p}{[}\PYG{l+m+mi}{5}\PYG{p}{]} \PYG{o}{=} \PYG{p}{\PYGZob{}\PYGZob{}}\PYG{l+m+mi}{8300}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Jonas\PYGZdq{}}\PYG{p}{,} \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{18}\PYG{p}{,} \PYG{l+m+mi}{11}\PYG{p}{,} \PYG{l+m+mi}{2018}\PYG{p}{\PYGZcb{}\PYGZcb{},}
+                               \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{2600}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Martha\PYGZdq{}}\PYG{p}{,} \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{25}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{2018}\PYG{p}{\PYGZcb{}\PYGZcb{},}
+                               \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{6900}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Klaus\PYGZdq{}}\PYG{p}{,} \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2001}\PYG{p}{\PYGZcb{}\PYGZcb{},}
+                               \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{4500}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Stefen\PYGZdq{}}\PYG{p}{,} \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{25}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{,} \PYG{l+m+mi}{2015}\PYG{p}{\PYGZcb{}\PYGZcb{},}
+                               \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{8600}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Caroline\PYGZdq{}}\PYG{p}{,} \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{28}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{,} \PYG{l+m+mi}{2015}\PYG{p}{\PYGZcb{}\PYGZcb{}\PYGZcb{};}
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Enter current date:\PYGZhy{} }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} Date: \PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{current\PYGZus{}date}\PYG{p}{.}\PYG{n}{date}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} Month: \PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{current\PYGZus{}date}\PYG{p}{.}\PYG{n}{month}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{} Year: \PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{current\PYGZus{}date}\PYG{p}{.}\PYG{n}{year}\PYG{p}{);}
+    \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{5}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{k}{if} \PYG{p}{((}\PYG{n}{current\PYGZus{}date}\PYG{p}{.}\PYG{n}{year} \PYG{o}{\PYGZhy{}} \PYG{n}{employes}\PYG{p}{[}\PYG{n}{i}\PYG{p}{].}\PYG{n}{doj}\PYG{p}{.}\PYG{n}{year}\PYG{p}{)} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{3}\PYG{p}{)} \PYG{n}{print\PYGZus{}employee}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{employes}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]);}
+        \PYG{k}{else} \PYG{k}{if} \PYG{p}{((}\PYG{n}{current\PYGZus{}date}\PYG{p}{.}\PYG{n}{year} \PYG{o}{\PYGZhy{}} \PYG{n}{employes}\PYG{p}{[}\PYG{n}{i}\PYG{p}{].}\PYG{n}{doj}\PYG{p}{.}\PYG{n}{year}\PYG{p}{)} \PYG{o}{==} \PYG{l+m+mi}{3}\PYG{p}{)}   \PYG{c+c1}{//year diff = 3}
+        \PYG{p}{\PYGZob{}}
+            \PYG{k}{if} \PYG{p}{((}\PYG{n}{current\PYGZus{}date}\PYG{p}{.}\PYG{n}{month} \PYG{o}{\PYGZgt{}} \PYG{n}{employes}\PYG{p}{[}\PYG{n}{i}\PYG{p}{].}\PYG{n}{doj}\PYG{p}{.}\PYG{n}{month}\PYG{p}{))}   \PYG{c+c1}{//month diff \PYGZgt{} 0}
+                \PYG{n}{print\PYGZus{}employee}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{employes}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]);}
+            \PYG{k}{else} \PYG{k}{if} \PYG{p}{((}\PYG{n}{current\PYGZus{}date}\PYG{p}{.}\PYG{n}{month} \PYG{o}{==} \PYG{n}{employes}\PYG{p}{[}\PYG{n}{i}\PYG{p}{].}\PYG{n}{doj}\PYG{p}{.}\PYG{n}{month}\PYG{p}{))} \PYG{c+c1}{//no month diff}
+                \PYG{k}{if} \PYG{p}{((}\PYG{n}{current\PYGZus{}date}\PYG{p}{.}\PYG{n}{date} \PYG{o}{\PYGZgt{}} \PYG{n}{employes}\PYG{p}{[}\PYG{n}{i}\PYG{p}{].}\PYG{n}{doj}\PYG{p}{.}\PYG{n}{date}\PYG{p}{))}   \PYG{c+c1}{//date diff \PYGZgt{} 0}
+                    \PYG{n}{print\PYGZus{}employee}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{employes}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]);}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

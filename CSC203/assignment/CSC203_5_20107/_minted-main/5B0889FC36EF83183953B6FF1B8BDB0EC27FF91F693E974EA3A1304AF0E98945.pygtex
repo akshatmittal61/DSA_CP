@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k+kt}{int} \PYG{n}{a}\PYG{p}{[}\PYG{l+m+mi}{40}\PYG{p}{],} \PYG{n}{s} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{i}\PYG{p}{;}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Rate the food: }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{for} \PYG{p}{(}\PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{40}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Student \PYGZpc{}d: \PYGZdq{}}\PYG{p}{,} \PYG{n}{i} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{);} \PYG{c+c1}{//input every student feedback}
+        \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{a}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]);}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{a}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{\PYGZlt{}=} \PYG{l+m+mi}{0}\PYG{p}{)}
+            \PYG{n}{a}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;} \PYG{c+c1}{//if somebody has rated below 1, make it 1}
+        \PYG{k}{else} \PYG{k}{if} \PYG{p}{(}\PYG{n}{a}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{10}\PYG{p}{)}
+            \PYG{n}{a}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{10}\PYG{p}{;} \PYG{c+c1}{//if somebody has rated above 10, make it 10}
+        \PYG{n}{s} \PYG{o}{+=} \PYG{n}{a}\PYG{p}{[}\PYG{n}{i}\PYG{p}{];}     \PYG{c+c1}{//sum the responses}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}On an average, the food has the rating of: \PYGZpc{}d out of 10\PYGZdq{}}\PYG{p}{,} \PYG{n}{s} \PYG{o}{/} \PYG{l+m+mi}{40}\PYG{p}{);} \PYG{c+c1}{//print the average rating}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

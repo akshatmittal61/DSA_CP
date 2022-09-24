@@ -1,0 +1,28 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k+kt}{char} \PYG{n}{str}\PYG{p}{[]} \PYG{o}{=} \PYG{l+s}{\PYGZdq{}Hello Adam 123\PYGZdq{}}\PYG{p}{;}
+    \PYG{k+kt}{int} \PYG{n}{vowels} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{consonants} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{k+kt}{char} \PYG{o}{*}\PYG{n}{s} \PYG{o}{=} \PYG{n}{str}\PYG{p}{;}
+    \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{s}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{!=} \PYG{l+s+sc}{\PYGZsq{}\PYGZbs{}0\PYGZsq{}}\PYG{p}{;)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{k}{if} \PYG{p}{(}
+            \PYG{p}{(}\PYG{o}{*}\PYG{n}{s} \PYG{o}{==} \PYG{l+s+sc}{\PYGZsq{}A\PYGZsq{}} \PYG{o}{||} \PYG{o}{*}\PYG{n}{s} \PYG{o}{==} \PYG{l+s+sc}{\PYGZsq{}E\PYGZsq{}} \PYG{o}{||} \PYG{o}{*}\PYG{n}{s} \PYG{o}{==} \PYG{l+s+sc}{\PYGZsq{}I\PYGZsq{}} \PYG{o}{||} \PYG{o}{*}\PYG{n}{s} \PYG{o}{==} \PYG{l+s+sc}{\PYGZsq{}O\PYGZsq{}} \PYG{o}{||} \PYG{o}{*}\PYG{n}{s} \PYG{o}{==} \PYG{l+s+sc}{\PYGZsq{}U\PYGZsq{}}\PYG{p}{)} \PYG{o}{||}
+            \PYG{p}{(}\PYG{o}{*}\PYG{n}{s} \PYG{o}{==} \PYG{l+s+sc}{\PYGZsq{}a\PYGZsq{}} \PYG{o}{||} \PYG{o}{*}\PYG{n}{s} \PYG{o}{==} \PYG{l+s+sc}{\PYGZsq{}e\PYGZsq{}} \PYG{o}{||} \PYG{o}{*}\PYG{n}{s} \PYG{o}{==} \PYG{l+s+sc}{\PYGZsq{}i\PYGZsq{}} \PYG{o}{||} \PYG{o}{*}\PYG{n}{s} \PYG{o}{==} \PYG{l+s+sc}{\PYGZsq{}o\PYGZsq{}} \PYG{o}{||} \PYG{o}{*}\PYG{n}{s} \PYG{o}{==} \PYG{l+s+sc}{\PYGZsq{}u\PYGZsq{}}\PYG{p}{))}
+            \PYG{o}{++}\PYG{n}{vowels}\PYG{p}{;}      \PYG{c+c1}{// if s[i] is vowel}
+        \PYG{k}{else} \PYG{k}{if} \PYG{p}{(}
+            \PYG{p}{((}\PYG{o}{*}\PYG{n}{s} \PYG{o}{\PYGZgt{}=} \PYG{l+s+sc}{\PYGZsq{}A\PYGZsq{}} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{o}{*}\PYG{n}{s} \PYG{o}{\PYGZlt{}=} \PYG{l+s+sc}{\PYGZsq{}Z\PYGZsq{}}\PYG{p}{)} \PYG{o}{||} \PYG{p}{(}\PYG{o}{*}\PYG{n}{s} \PYG{o}{\PYGZgt{}=} \PYG{l+s+sc}{\PYGZsq{}a\PYGZsq{}} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{o}{*}\PYG{n}{s} \PYG{o}{\PYGZlt{}=} \PYG{l+s+sc}{\PYGZsq{}z\PYGZsq{}}\PYG{p}{))} \PYG{o}{\PYGZam{}\PYGZam{}}
+            \PYG{p}{(}\PYG{o}{!}\PYG{p}{(}
+                \PYG{p}{(}\PYG{o}{*}\PYG{n}{s} \PYG{o}{==} \PYG{l+s+sc}{\PYGZsq{}A\PYGZsq{}} \PYG{o}{||} \PYG{o}{*}\PYG{n}{s} \PYG{o}{==} \PYG{l+s+sc}{\PYGZsq{}E\PYGZsq{}} \PYG{o}{||} \PYG{o}{*}\PYG{n}{s} \PYG{o}{==} \PYG{l+s+sc}{\PYGZsq{}I\PYGZsq{}} \PYG{o}{||} \PYG{o}{*}\PYG{n}{s} \PYG{o}{==} \PYG{l+s+sc}{\PYGZsq{}O\PYGZsq{}} \PYG{o}{||} \PYG{o}{*}\PYG{n}{s} \PYG{o}{==} \PYG{l+s+sc}{\PYGZsq{}U\PYGZsq{}}\PYG{p}{)} \PYG{o}{||}
+                \PYG{p}{(}\PYG{o}{*}\PYG{n}{s} \PYG{o}{==} \PYG{l+s+sc}{\PYGZsq{}a\PYGZsq{}} \PYG{o}{||} \PYG{o}{*}\PYG{n}{s} \PYG{o}{==} \PYG{l+s+sc}{\PYGZsq{}e\PYGZsq{}} \PYG{o}{||} \PYG{o}{*}\PYG{n}{s} \PYG{o}{==} \PYG{l+s+sc}{\PYGZsq{}i\PYGZsq{}} \PYG{o}{||} \PYG{o}{*}\PYG{n}{s} \PYG{o}{==} \PYG{l+s+sc}{\PYGZsq{}o\PYGZsq{}} \PYG{o}{||} \PYG{o}{*}\PYG{n}{s} \PYG{o}{==} \PYG{l+s+sc}{\PYGZsq{}u\PYGZsq{}}\PYG{p}{))))}
+            \PYG{o}{++}\PYG{n}{consonants}\PYG{p}{;}   \PYG{c+c1}{// if s[i] is alphabet but not vowel}
+        \PYG{o}{*}\PYG{n}{s}\PYG{o}{++}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ String: \PYGZpc{}s\PYGZdq{}}\PYG{p}{,} \PYG{n}{str}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Vowels: \PYGZpc{}d }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Consonants: \PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{vowels}\PYG{p}{,} \PYG{n}{consonants}\PYG{p}{);}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}
