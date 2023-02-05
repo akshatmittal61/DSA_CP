@@ -1,3 +1,7 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
 bool isPrime(int n)
 {
     for (int i = 2; i <= sqrt(n); ++i)
@@ -34,4 +38,45 @@ long long factorial(long long a)
         return 1;
     else
         return a * factorial(a - 1);
+}
+
+// JS: Array.split()
+
+vector<string> split(string s, char c)
+{
+    int n = s.length();
+    vector<string> ans;
+    for (int i = 0; i < n; ++i)
+    {
+        string h = "";
+        for (int j = i; j < n; ++j)
+        {
+            if (s[j] == c || j == n - 1)
+            {
+                i = j;
+                if (j == n - 1)
+                    h += s[n - 1];
+                break;
+            }
+            else
+                h += s[j];
+        }
+        ans.push_back(h);
+    }
+    return ans;
+}
+
+// JS: Array.join()
+
+string join(vector<string> v, char c)
+{
+    string ans = "";
+    int n = v.size();
+    for (int i = 0; i < n; ++i)
+    {
+        ans += v[i];
+        if (i != n - 1)
+            ans += c;
+    }
+    return ans;
 }
