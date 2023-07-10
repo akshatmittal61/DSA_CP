@@ -9,25 +9,31 @@
 #define sortrev(v) sort(v.begin(), v.end(), greater<ll>())
 using namespace std;
 
-int maxCircularSumSubarray(vector<int> v)
+string removeTrailingZeros(string num)
 {
-    
+    int n = num.length();
+    int nz = 0;
+    for (int i = n - 1; i >= 0; --i)
+    {
+        if (num[i] == '0')
+            ++nz;
+        else
+            break;
+    }
+    return num.substr(0, n - nz);
 }
 
 void solve()
 {
-    int n;
-    cin >> n;
-    vector<int> v(n);
-    fl(i, n) cin >> v[i];
-    cout << maxCircularSumSubarray(v);
+    string s;
+    cin >> s;
+    cout << removeTrailingZeros(s);
 }
 
 int main()
 {
     _ fs
         ll test = 1;
-    cin >> test;
     while (test--)
     {
         solve();
