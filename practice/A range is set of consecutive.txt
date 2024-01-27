@@ -1,0 +1,124 @@
+A range is set of consecutive numbers e.g. range [1,4] is same as set (1,2,3,4).
+A sub-array is said to be covering a group of ranges if:
+• Each element of this sub-array belongs to at least one of the covered ranges.
+• All values belonging to each . once in the sub-array. of the covered range must be present at least
+You will be given an array a of length n with q queries.
+Answer to each query [l,r] is the minimum number of ranges covering the sub-array a[l..r].
+Find the sum of answers to all q queries. Since the answer may be large return it modulo 109+7
+
+
+Input Format
+The first line contains an integer, n, denoting the size of array a. Each line i of the n subsequent lines (where 0 ≤ i < n) contains describing a[i].
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+You have a sequence k. of strings s1, s2, s3, ..., sn and an impeg
+You repeat the following steps n times to generate the value of k.
+• At the i-th step, you will concatenates string si with k either from the left (forming si + k) or from the right (forming k + si);
+For example, a sequence of strings 'able', 'def could result in abcdef, defcab', or 'defabc' depending on the sequence of antigupt concatenations chosen. string
+You are given t independent string pairs a and b. For each pair determine if there exists a sequence of strings that will allow you to generate both a and b using the same process used to generate k. If it is possible the answer is "YES" and this is stored in an array X. Otherwise, your answer is "NO" and it is stored in array X.
+pta)Find the array X.
+Input Format
+944621
+The first line contains an integer, t, denoting the number of independent string pairs.
+whank
+Each line i of the t subsequent lines (where 0 ≤ i < t) contains a string
+describing a[i]. Each line i of the t subsequent lines (where 0 ≤ i < t) contains a strin describing b[i].
+
+
+
+You found a tree containing n nodes rooted at node 1 such that the ith node is labeled with a value a[i]. There is a frog that moves between nodes of the tree from node x to node y if and only if ax < ay. However, once the frog goes to the node y, it can't return to any node in the direction of the node x. This means that the path traveled by the frog is an increasing subsequence of some tree path
+Let F(x) be the longest path the frog can take if he should pass through node x. For each node x from 1 to n, find F(x) and store it in an array B as B[x].
+It is given that node x may not be the path's starting or ending node This means that the longest path traveled by the frog must contain the node x in any position of the path
+Input Format
+The first line contains an integer, n, denoting the number of nodes in tree.
+The next line contains an integer, m, denoting the number of edges in t tree. This value is always equal to (n-1)
+The next line contains an integer, c, denoting the number of vertices in each edge. This is always equal to 2.
+Each line i of the n subsequent lines (where 1 <= i <= n) contains an integer describing a[i].
+Each line of the m subsequent lines (where O <= i < m contains space separated integers each describing the row edges[i]. The row edges i represents the ith edge in form (uv) representing an undirected edge between node u and node v where (u != v)
+
+Sample input:
+2
+1
+2
+1
+3
+1 2
+Sample output:
+2 2
+
+Function:
+vector<int> frog(int n, int m, int c, vector<int> a, vector<vector<int>> edges)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[11:11, 1/21/2024] CSE-Varun Prohit: Ek array h
+[11:11, 1/21/2024] CSE-Varun Prohit: Usme ek aise subarraay
+[11:11, 1/21/2024] CSE-Varun Prohit: Jisme given element K max timeaaye
+[11:11, 1/21/2024] CSE-Varun Prohit: Aur vo uss subarraay k max bhi ho
+
+There is an array. We have to get a subarray, where the given element occurs max k times, and is also the max element of the subarray
+
+
+
+
+You have a sequence of strings s1, s2,s3,..., sn and an empty string
+You repeat the following steps n times to generate the value of k
+At the i-th step, you will concatenates string si with ik either from the اللہ left (forming si + or from the right (forming k + si
+For example, a sequence of strings 'ab', 'c', 'def could result in strings 'abcdef' 'defcab',or 'defabc' depending on the sequence of concatenation choosen
+You are given t independent string pairs a and b. For each pair determine there exists a sequence of strings that will allow you to generate baa b using the same process used to generate k. If it is possible the e "YES" and this is stored in an array X. Otherwise, your answer is "NO" is stored in array X
+Find the array x
+
+Input Format
+The first line contains an integer, t, denoting the number of independent string pairs.
+Each line i of the t subsequent lines (where 0 <= i < f contains a string
+describing a[i]
+Each line of the t subsequent I lines (where 0 ≤ i < t) contains a string describing b[i].
+
+Sample ip
+1
+wzfw
+zwvz
+op:
+NO
+
+
+4
+abc
+abca
+acba
+aab
+cba
+caab
+caab
+bba
+
+YES
+YES
+NO
+NO
+
+Function:
+vector<string> check(int t, vector<string> a, vector<string> b)
